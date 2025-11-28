@@ -15,10 +15,6 @@ run/main_scene="uid://jukike4yiji8"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-Game="*res://Game.tscn"
-
 [input]
 
 left_click={

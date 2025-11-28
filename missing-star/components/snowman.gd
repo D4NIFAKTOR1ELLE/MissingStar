@@ -1,14 +1,20 @@
 extends CharacterBody2D
 
 @export var viewport_path: NodePath
-@onready var viewport: SubViewport = $SubViewport
-@onready var sound = $AudioStreamPlayer
-@onready var camera = $Camera2D
+
+var viewport
+var sound
+var camera
 
 const SPEED = 420.0
 const JUMP_VELOCITY = -420.0
 
 var can_doublejump = true
+
+func initialise():
+	viewport = $SubViewport
+	sound = $AudioStreamPlayer
+	camera = $Camera2D
 
 func save_to():
 	viewport.world_2d = get_tree().root.get_world_2d()
@@ -49,3 +55,14 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 
 func die():
 	set_physics_process(false)
+	
+func set_camera_limits(map: Control):
+	if map == null:
+		return
+	
+	var map_limits = map.get_rect()
+	
+	camera.set_limit(SIDE_LEFT, map_limits.position.x)
+	camera.set_limit(SIDE_RIGHT, map_limits.end.x)
+	camera.set_limit(SIDE_TOP, map_limits.position.y)
+	camera.set_limit(SIDE_BOTTOM, map_limits.end.y)

@@ -11,3 +11,5 @@ res://game.gd
 res://levels/Level2.tscn
 res://levels/Level3.tscn
 res://ui/StartScreen.tscn
+res://ui/start_screen.gd
+res://temp/Boot.tscn
