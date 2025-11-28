@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://b1uwhhd4ja70y"]
+[gd_scene load_steps=2 format=4 uid="uid://b1uwhhd4ja70y"]
+
+[ext_resource type="TileSet" uid="uid://vtjbthkqh33u" path="res://levels/collision_tileset.tres" id="1_gljt1"]
 
 [node name="Level2" type="Node"]
+
+[node name="BG" type="ColorRect" parent="."]
+offset_top = 5.0
+offset_right = 3207.0
+offset_bottom = 748.0
+color = Color(0, 0, 0, 1)
+
+[node name="LevelCollision" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAACABUAAAABAAAAAAADABUAAAABAAAAAAAEABUAAAABAAAAAAAFABUAAAABAAAAAAAGABUAAAABAAAAAAAHABUAAAABAAAAAAAIABUAAAABAAAAAAAJABUAAAABAAAAAAAKABUAAAABAAAAAAALABUAAAABAAAAAAAMABUAAAABAAAAAAANABUAAAABAAAAAAAOABUAAAABAAAAAAAPABUAAAABAAAAAAAQABUAAAABAAAAAAA=")
+tile_set = ExtResource("1_gljt1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

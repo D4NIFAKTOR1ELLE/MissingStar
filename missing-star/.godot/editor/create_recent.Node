@@ -1,11 +1,14 @@
+Button
+VBoxContainer
+RichTextLabel
+ColorRect
+AudioStreamPlayer
 Node
 AnimationPlayer
 VisibleOnScreenNotifier2D
-AudioStreamPlayer
 Camera2D
 TileMapLayer
 CanvasLayer
 CanvasGroup
 TextureRect
 CollisionShape2D
-CharacterBody2D

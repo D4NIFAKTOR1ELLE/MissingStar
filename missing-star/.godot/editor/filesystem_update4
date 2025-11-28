@@ -8,3 +8,6 @@ res://components/star.gd
 res://levels/collision_tileset.tres
 res://Game.tscn
 res://game.gd
+res://levels/Level2.tscn
+res://levels/Level3.tscn
+res://ui/StartScreen.tscn

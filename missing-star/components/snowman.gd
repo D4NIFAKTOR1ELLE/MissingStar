@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 @export var viewport_path: NodePath
-@onready var tilemap: TileMapLayer = get_node("../TileMapLayer")
-@onready var viewport: SubViewport = get_node("../SubViewport")
+@onready var viewport: SubViewport = $SubViewport
 @onready var sound = $AudioStreamPlayer
+@onready var camera = $Camera2D
 
 const SPEED = 420.0
 const JUMP_VELOCITY = -420.0
@@ -19,23 +19,20 @@ func save_to():
 	return img.save_png("user://Screenshot.png")
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		can_doublejump = true
-		velocity.y = JUMP_VELOCITY
-		sound.play()
-	elif Input.is_action_just_pressed("ui_accept") and !is_on_floor() and can_doublejump:
+		jump()
+	elif Input.is_action_just_pressed("jump") and !is_on_floor() and can_doublejump:
 		can_doublejump = false  
-		velocity.y = JUMP_VELOCITY
-		sound.play()
+		jump()
 		
 	if Input.is_action_just_pressed("right_click"):
 		save_to()
 
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -44,7 +41,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func jump():
-	pass
+	velocity.y = JUMP_VELOCITY
+	sound.play()
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	await die()
 
 func die():
 	set_physics_process(false)
