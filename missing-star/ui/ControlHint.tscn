@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://d0c8m8k05iee1"]
+
+[node name="ControlHint" type="CanvasLayer"]

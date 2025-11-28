@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://xwpouem86pmt"]
+[gd_scene load_steps=4 format=3 uid="uid://xwpouem86pmt"]
+
+[ext_resource type="Script" uid="uid://boqt20rk188r4" path="res://components/snowman.gd" id="1_y2cei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb48l"]
 size = Vector2(40, 40)
@@ -6,10 +8,12 @@ size = Vector2(40, 40)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y2cei"]
 
 [node name="Snowman" type="CharacterBody2D"]
+script = ExtResource("1_y2cei")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_cb48l")
+metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -20.0
@@ -17,3 +21,11 @@ offset_top = -19.0
 offset_right = 20.0
 offset_bottom = 21.0
 texture = SubResource("PlaceholderTexture2D_y2cei")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-20, -19, 40, 40)

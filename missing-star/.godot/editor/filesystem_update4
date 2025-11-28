@@ -1,0 +1,5 @@
+res://components/Snowman.tscn
+res://components/snowman.gd
+res://levels/Level1.tscn
+res://temp/player_sidescroller.gd
+res://ui/EndScreen.tscn

@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=4 uid="uid://d32alspyn51qv"]
+
+[ext_resource type="Shader" path="res://test/LYGIATest.gdshader" id="1_dmfxv"]
+[ext_resource type="PackedScene" uid="uid://vqh8yk5rsrf0" path="res://test/player_sidescroller.tscn" id="3_jnix4"]
+[ext_resource type="Texture2D" uid="uid://coo771u25stvv" path="res://images/collisiontile32.png" id="5_s2kuo"]
+[ext_resource type="Texture2D" uid="uid://ob3ols2857ty" path="res://images/cloud_parallax.png" id="6_6xd4h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p6h10"]
+shader = ExtResource("1_dmfxv")
+shader_parameter/split_y = 0.5
+shader_parameter/offset_pixels = 30.0
+shader_parameter/seam_smooth = 0.002
+shader_parameter/intensity = 1.0
+shader_parameter/move_horizontal = false
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4j2f1"]
+texture = ExtResource("5_s2kuo")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_al4gv"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4j2f1")
+
+[node name="BruderIstAufGarNichts" type="Node2D"]
+material = SubResource("ShaderMaterial_p6h10")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 5209.0
+offset_bottom = 1214.0
+color = Color(0, 0, 0, 1)
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_offset = Vector2(130, -911)
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(50, 0)
+repeat_times = 4
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D"]
+self_modulate = Color(1, 1, 1, 0.388235)
+offset_left = 1786.0
+offset_top = 926.0
+offset_right = 3706.0
+offset_bottom = 2006.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_6xd4h")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." instance=ExtResource("3_jnix4")]
+position = Vector2(285, 468)
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(130, -911)
+tile_map_data = PackedByteArray("AAACADAAAAABAAAAAAADADAAAAABAAAAAAAEADAAAAABAAAAAAAFADAAAAABAAAAAAAGADAAAAABAAAAAAAHADAAAAABAAAAAAAIADAAAAABAAAAAAAJADAAAAABAAAAAAAKADAAAAABAAAAAAALADAAAAABAAAAAAAMADAAAAABAAAAAAANADAAAAABAAAAAAAOADAAAAABAAAAAAAPADAAAAABAAAAAAAQADAAAAABAAAAAAARADAAAAABAAAAAAASADAAAAABAAAAAAATADAAAAABAAAAAAAUADAAAAABAAAAAAAVADAAAAABAAAAAAAZAC0AAAABAAAAAAAaAC0AAAABAAAAAAAaACwAAAABAAAAAAAbACwAAAABAAAAAAAcACwAAAABAAAAAAAdACwAAAABAAAAAAAeACwAAAABAAAAAAAiACkAAAABAAAAAAAiACoAAAABAAAAAAAjACoAAAABAAAAAAAkACkAAAABAAAAAAATACMAAAABAAAAAAAUACMAAAABAAAAAAAVACMAAAABAAAAAAAWACMAAAABAAAAAAAXACMAAAABAAAAAAApADIAAAABAAAAAAAqADIAAAABAAAAAAAqADEAAAABAAAAAAArADEAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_al4gv")
