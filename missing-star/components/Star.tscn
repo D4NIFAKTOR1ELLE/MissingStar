@@ -1,14 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://dllklx4cxhw3b"]
 
 [ext_resource type="Script" uid="uid://c11ruui4chcwq" path="res://components/star.gd" id="1_hfvjk"]
+[ext_resource type="Texture2D" uid="uid://btmeukmnx8gbc" path="res://img/star.png" id="1_mj8d1"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hfvjk"]
-
-[node name="Star" type="TextureRect"]
-offset_left = -20.0
-offset_top = -19.0
-offset_right = 20.0
-offset_bottom = 21.0
-texture = SubResource("PlaceholderTexture2D_hfvjk")
+[node name="Star" type="Sprite2D"]
+texture = ExtResource("1_mj8d1")
 script = ExtResource("1_hfvjk")
-metadata/_edit_lock_ = true

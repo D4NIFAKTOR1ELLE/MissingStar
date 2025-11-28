@@ -1,3 +1,4 @@
+Sprite2D
 Button
 VBoxContainer
 RichTextLabel
@@ -11,4 +12,3 @@ TileMapLayer
 CanvasLayer
 CanvasGroup
 TextureRect
-CollisionShape2D

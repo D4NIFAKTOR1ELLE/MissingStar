@@ -10,6 +10,7 @@ const SPEED = 420.0
 const JUMP_VELOCITY = -420.0
 
 var can_doublejump = true
+var star_ref
 
 func initialise():
 	viewport = $SubViewport
@@ -46,9 +47,19 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("left_click"):
+		await fly()
+
 func jump():
 	velocity.y = JUMP_VELOCITY
 	sound.play()
+
+func fly():
+	var star_position = star_ref.global_position
+
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "global_position", star_position, 0.3)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	await die()

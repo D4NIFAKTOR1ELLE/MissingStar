@@ -9,10 +9,13 @@ var level3 = preload("res://levels/Level3.tscn")
 
 var current_level
 
+@onready var start_screen = $StartScreen
+
 func start_game():
 	snowman = snowman.instantiate()
 	star = star.instantiate()
 
+	snowman.star_ref = star
 	snowman.initialise()
 
 	launch_level(level1)
@@ -24,9 +27,10 @@ func launch_level(level: PackedScene):
 	current_level.add_child(snowman)
 	current_level.add_child(star)
 	
-	await spawn()
+	spawn()
 	
-	$StartScreen.hide()
+	star.initialise()
+	remove_child(start_screen)
 	
 	snowman.set_camera_limits(current_level.get_node("BG"))
 

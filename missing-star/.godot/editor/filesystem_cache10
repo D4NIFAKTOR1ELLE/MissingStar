@@ -1,25 +1,27 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1764354940
+::res://::1764356686
 export_presets.cfg::TextFile::-1::1764354940::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::1862139378208412729::1764344948::1764344958::1::::<><><>0<>0<>15333cf13a87519e8de3e043b32d2b7d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-Game.tscn::PackedScene::673609136865134389::1764354732::0::1::::<><><>0<>0<><>::uid://5gq8v5l6uwqj::::res://game.gd<>uid://bpyhjseyq21qq::::res://ui/StartScreen.tscn
-game.gd::GDScript::2119083128624968817::1764354923::0::1::::<>Node<><>0<>0<><>::
+Game.tscn::PackedScene::673609136865134389::1764356247::0::1::::<><><>0<>0<><>::uid://5gq8v5l6uwqj::::res://game.gd<>uid://bpyhjseyq21qq::::res://ui/StartScreen.tscn
+game.gd::GDScript::2119083128624968817::1764356686::0::1::::<>Node<><>0<>0<><>::
+default_bus_layout.tres::AudioBusLayout::4595527809284958627::1764355489::0::1::::<><><>0<>0<><>::
 sound.gd::GDScript::1096313685041945984::1764350385::0::1::::<>CanvasLayer<><>0<>0<><>::
-::res://components/::1764354611
-star.gd::GDScript::6652494092481742460::1764350743::0::1::::<>TextureRect<><>0<>0<><>::
-Star.tscn::PackedScene::7954675553011224889::1764350743::0::1::::<><><>0<>0<><>::uid://c11ruui4chcwq::::res://components/star.gd
+::res://components/::1764357123
+star.gd::GDScript::6652494092481742460::1764357123::0::1::::<>Sprite2D<><>0<>0<><>::
+Star.tscn::PackedScene::7954675553011224889::1764357123::0::1::::<><><>0<>0<><>::uid://c11ruui4chcwq::::res://components/star.gd
 snowman.gd::GDScript::3403297717824369291::1764354611::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Snowman.tscn::PackedScene::1660696527507006319::1764354369::0::1::::<><><>0<>0<><>::uid://boqt20rk188r4::::res://components/snowman.gd
 sub_viewport.gd::GDScript::7653063212508892090::1764350146::0::1::::<>SubViewport<><>0<>0<><>::
-::res://img/::1764349274
+::res://img/::1764357395
 cloud_parallax.png::CompressedTexture2D::1719478913553678160::1764349271::1764349274::1::::<><><>0<>0<>e808657ef603fc8523756a98d764484f<>res://.godot/imported/cloud_parallax.png-4c33e17e562cde502ae9843cf3cbf6da.ctex::
 collisiontile32.png::CompressedTexture2D::5533426870569550082::1764349253::1764349254::1::::<><><>0<>0<>c15b7dc60964af63d35136e75e87b178<>res://.godot/imported/collisiontile32.png-587fafd20f9484b46bc85fc9d6edcd57.ctex::
-::res://levels/::1764354923
-Level1.tscn::PackedScene::6888390698089755063::1764354923::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres
+star.png::CompressedTexture2D::3745060374107452116::1764357395::1764357395::1::::<><><>0<>0<>568803f1686095c802a461b3fe7af1b4<>res://.godot/imported/star.png-d9e21300bfdce2df88dc348114f24979.ctex::
+::res://levels/::1764355505
+Level1.tscn::PackedScene::6888390698089755063::1764355505::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres
 Level2.tscn::PackedScene::4253966821388891482::1764352534::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres
 Level3.tscn::PackedScene::5186446078407156214::1764352536::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres
 collision_tileset.tres::TileSet::1513738141687946612::1764350479::0::1::::<><><>0<>0<><>::uid://ck3oy5la7uat3::::res://img/collisiontile32.png
-::res://music/::1764355458
+::res://music/::1764355460
 Ella Fitzgerald - Frosty The Snowman (Official Video).mp3::AudioStreamMP3::5288927532908417014::1764355436::1764355460::1::::<><><>0<>0<>5114849add614093a1209f6abd1a7350<>res://.godot/imported/Ella Fitzgerald - Frosty The Snowman (Official Video).mp3-9808eb05f3d978bada5334c061f8206e.mp3str::
 Frank Wess - Rainy Afternoon.mp3::AudioStreamMP3::1463062360379950175::1764355445::1764355460::1::::<><><>0<>0<>8ddd844f020ac0f8ed0eca259f402221<>res://.godot/imported/Frank Wess - Rainy Afternoon.mp3-befd035f3551533374875b0d06494815.mp3str::
 Peggy Lee - Happy Holiday (Official Video).mp3::AudioStreamMP3::4074342044528142659::1764355440::1764355460::1::::<><><>0<>0<>3f8ff64efc7f21e45275dd9bc3239c0b<>res://.godot/imported/Peggy Lee - Happy Holiday (Official Video).mp3-0b976b0fddfec2f4d23785ee6339317d.mp3str::
@@ -28,8 +30,8 @@ The Supremes - My Favorite Things (Official Video).mp3::AudioStreamMP3::18864541
 ::res://temp/::1764354636
 Bruder ist auf gar nichts.tscn::PackedScene::9180308485738178845::1764349184::0::1::::<><><>0<>0<><>::res://test/LYGIATest.gdshader<>uid://vqh8yk5rsrf0::::res://test/player_sidescroller.tscn<>uid://coo771u25stvv::::res://images/collisiontile32.png<>uid://ob3ols2857ty::::res://images/cloud_parallax.png
 Boot.tscn::PackedScene::1283180409614364231::1764354636::0::1::::<><><>0<>0<><>::
-::res://ui/::1764354523
+::res://ui/::1764355789
 ControlHint.tscn::PackedScene::8920138737721278194::1764348809::0::1::::<><><>0<>0<><>::
 EndScreen.tscn::PackedScene::2048091320866689273::1764349985::0::1::::<><><>0<>0<><>::
-start_screen.gd::GDScript::4739362898138846989::1764354523::0::1::::<>CanvasLayer<><>0<>0<><>::
+start_screen.gd::GDScript::4739362898138846989::1764355789::0::1::::<>CanvasLayer<><>0<>0<><>::
 StartScreen.tscn::PackedScene::3489240448167974384::1764354135::0::1::::<><><>0<>0<><>::uid://b8r1u5mofr2w4::::res://ui/start_screen.gd
