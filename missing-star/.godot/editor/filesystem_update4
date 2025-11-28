@@ -3,3 +3,6 @@ res://components/snowman.gd
 res://levels/Level1.tscn
 res://temp/player_sidescroller.gd
 res://ui/EndScreen.tscn
+res://components/Star.tscn
+res://components/star.gd
+res://levels/collision_tileset.tres

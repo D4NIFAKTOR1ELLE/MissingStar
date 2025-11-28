@@ -1,19 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5e112m6mgiyx"]
+[gd_scene load_steps=3 format=3 uid="uid://c5e112m6mgiyx"]
 
-[ext_resource type="Texture2D" uid="uid://ck3oy5la7uat3" path="res://img/collisiontile32.png" id="1_b84ys"]
+[ext_resource type="TileSet" uid="uid://vtjbthkqh33u" path="res://levels/collision_tileset.tres" id="1_32mhh"]
 [ext_resource type="PackedScene" uid="uid://xwpouem86pmt" path="res://components/Snowman.tscn" id="2_32mhh"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32mhh"]
-resource_name = "Collision"
-texture = ExtResource("1_b84ys")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_8ww3a"]
-tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_32mhh")
 
 [node name="Level1" type="Node"]
 
@@ -24,7 +12,7 @@ offset_bottom = 748.0
 color = Color(0, 0, 0, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_set = SubResource("TileSet_8ww3a")
+tile_set = ExtResource("1_32mhh")
 
 [node name="Snowman" parent="." instance=ExtResource("2_32mhh")]
 position = Vector2(273, 528)
