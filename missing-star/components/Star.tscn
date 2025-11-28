@@ -4,6 +4,5 @@
 [ext_resource type="Texture2D" uid="uid://btmeukmnx8gbc" path="res://img/star.png" id="1_mj8d1"]
 
 [node name="Star" type="Sprite2D"]
-position = Vector2(-25, -24)
 texture = ExtResource("1_mj8d1")
 script = ExtResource("1_hfvjk")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=4 uid="uid://cf5makudwm4vy"]
+[gd_scene load_steps=3 format=4 uid="uid://cf5makudwm4vy"]
 
 [ext_resource type="TileSet" uid="uid://vtjbthkqh33u" path="res://levels/collision_tileset.tres" id="1_gq8fh"]
+[ext_resource type="PackedScene" uid="uid://bh36rmt5w8d03" path="res://game/LevelEnd.tscn" id="2_11ac5"]
 
 [node name="Level3" type="Node"]
 
@@ -11,10 +12,13 @@ offset_bottom = 748.0
 color = Color(0, 0, 0, 1)
 
 [node name="LevelCollision" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAACABUAAAABAAAAAAADABUAAAABAAAAAAAEABUAAAABAAAAAAAFABUAAAABAAAAAAAGABUAAAABAAAAAAAHABUAAAABAAAAAAAIABUAAAABAAAAAAAJABUAAAABAAAAAAAKABUAAAABAAAAAAALABUAAAABAAAAAAAMABUAAAABAAAAAAANABUAAAABAAAAAAAOABUAAAABAAAAAAAPABUAAAABAAAAAAAQABUAAAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAACABUAAAABAAAAAAADABUAAAABAAAAAAAEABUAAAABAAAAAAAFABUAAAABAAAAAAAGABUAAAABAAAAAAAHABUAAAABAAAAAAAIABUAAAABAAAAAAAJABUAAAABAAAAAAAKABUAAAABAAAAAAALABUAAAABAAAAAAAMABUAAAABAAAAAAANABUAAAABAAAAAAAOABUAAAABAAAAAAAPABUAAAABAAAAAAAQABUAAAABAAAAAABhABEAAAABAAAAAABgABEAAAABAAAAAABfABEAAAABAAAAAABeABEAAAABAAAAAABdABAAAAABAAAAAABcABAAAAABAAAAAABbABAAAAABAAAAAABaABAAAAABAAAAAABZABAAAAABAAAAAABYABAAAAABAAAAAABYABEAAAABAAAAAABXABEAAAABAAAAAABWABEAAAABAAAAAAA=")
 tile_set = ExtResource("1_gq8fh")
 
 [node name="Spawn" type="Marker2D" parent="."]
 position = Vector2(145, 634)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="LevelEnd" parent="." instance=ExtResource("2_11ac5")]
+position = Vector2(3066, 405)
