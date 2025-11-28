@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://4gd1aew5rii8"]
 
 [node name="EndScreen" type="CanvasLayer"]
+
+[node name="BG" type="ColorRect" parent="."]
+offset_left = -54.0
+offset_top = -47.0
+offset_right = 1213.0
+offset_bottom = 702.0
+color = Color(0, 0, 0, 1)
