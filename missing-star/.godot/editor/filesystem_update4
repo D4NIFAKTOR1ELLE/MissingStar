@@ -6,3 +6,5 @@ res://ui/EndScreen.tscn
 res://components/Star.tscn
 res://components/star.gd
 res://levels/collision_tileset.tres
+res://Game.tscn
+res://game.gd

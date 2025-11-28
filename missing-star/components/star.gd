@@ -1,5 +1,7 @@
 extends TextureRect
 
+var jump_range: int = 400
+
 func _ready() -> void:
 	set_physics_process(false)
 
@@ -10,5 +12,5 @@ func _physics_process(_delta: float) -> void:
 	#var target = player.get_global_mouse_position()
 	#var angle = target.direction_to(player.movement.global_position).angle()
 	#
-	#global_position.x = player.movement.global_position.x - swing_range * cos(angle)
-	#global_position.y = player.movement.global_position.y - swing_range * sin(angle)
+	#global_position.x = player.movement.global_position.x - jump_range * cos(angle)
+	#global_position.y = player.movement.global_position.y - jump_range * sin(angle)
