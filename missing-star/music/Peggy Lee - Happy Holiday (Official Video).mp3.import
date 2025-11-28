@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bybv223yg6k3l"
+path="res://.godot/imported/Peggy Lee - Happy Holiday (Official Video).mp3-0b976b0fddfec2f4d23785ee6339317d.mp3str"
+
+[deps]
+
+source_file="res://music/Peggy Lee - Happy Holiday (Official Video).mp3"
+dest_files=["res://.godot/imported/Peggy Lee - Happy Holiday (Official Video).mp3-0b976b0fddfec2f4d23785ee6339317d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

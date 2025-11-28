@@ -19,13 +19,21 @@ func start_game():
 
 func launch_level(level: PackedScene):
 	current_level = level.instantiate()
-
+	add_child(current_level)
+	
 	current_level.add_child(snowman)
 	current_level.add_child(star)
+	
+	await spawn()
 	
 	$StartScreen.hide()
 	
 	snowman.set_camera_limits(current_level.get_node("BG"))
+
+func spawn():
+	var spawn_point = current_level.get_node("Spawn")
+	
+	snowman.global_position = spawn_point.get_global_transform().origin
 
 func finish():
 	pass

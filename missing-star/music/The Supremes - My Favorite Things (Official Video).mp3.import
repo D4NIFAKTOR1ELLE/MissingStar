@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://142vg8o2i5pj"
+path="res://.godot/imported/The Supremes - My Favorite Things (Official Video).mp3-5bdb3688ae988db24abb7b228a392f2a.mp3str"
+
+[deps]
+
+source_file="res://music/The Supremes - My Favorite Things (Official Video).mp3"
+dest_files=["res://.godot/imported/The Supremes - My Favorite Things (Official Video).mp3-5bdb3688ae988db24abb7b228a392f2a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

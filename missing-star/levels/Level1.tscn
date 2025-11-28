@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=4 uid="uid://c5e112m6mgiyx"]
+[gd_scene load_steps=2 format=4 uid="uid://c5e112m6mgiyx"]
 
 [ext_resource type="TileSet" uid="uid://vtjbthkqh33u" path="res://levels/collision_tileset.tres" id="1_32mhh"]
-[ext_resource type="PackedScene" uid="uid://xwpouem86pmt" path="res://components/Snowman.tscn" id="2_32mhh"]
 
 [node name="Level1" type="Node"]
 
@@ -15,7 +14,7 @@ color = Color(0, 0, 0, 1)
 tile_map_data = PackedByteArray("AAACABUAAAABAAAAAAADABUAAAABAAAAAAAEABUAAAABAAAAAAAFABUAAAABAAAAAAAGABUAAAABAAAAAAAHABUAAAABAAAAAAAIABUAAAABAAAAAAAJABUAAAABAAAAAAAKABUAAAABAAAAAAALABUAAAABAAAAAAAMABUAAAABAAAAAAANABUAAAABAAAAAAAOABUAAAABAAAAAAAPABUAAAABAAAAAAAQABUAAAABAAAAAAA=")
 tile_set = ExtResource("1_32mhh")
 
-[node name="Snowman" parent="." instance=ExtResource("2_32mhh")]
-position = Vector2(195, 644)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(145, 634)
