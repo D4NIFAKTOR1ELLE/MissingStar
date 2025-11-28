@@ -9,7 +9,7 @@ func initialise():
 	set_physics_process(true)
 
 func _physics_process(_delta: float) -> void:
-	global_position = get_viewport().get_mouse_position()
+	global_position = get_viewport().get_camera_2d().get_global_mouse_position()
 
 #ALERT The parametric equation to make the player jump work
 	#var target = player.get_global_mouse_position()

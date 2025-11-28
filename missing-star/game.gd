@@ -15,6 +15,8 @@ func start_game():
 	snowman = snowman.instantiate()
 	star = star.instantiate()
 
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
 	snowman.star_ref = star
 	snowman.initialise()
 
