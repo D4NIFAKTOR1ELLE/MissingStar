@@ -34,21 +34,18 @@ func launch_level(level: PackedScene):
 	spawn()
 	
 	star.initialise()
-
-	if is_instance_valid(start_screen):
-		remove_child(start_screen)
 	
 	snowman.set_camera_limits(current_level.get_node("BG"))
 
-func end_level():
+func end_level(next_level: PackedScene):
 	Transition.fade_in()
 	await Transition.animplayer.animation_finished
 	
 	current_level.remove_child(snowman)
 	current_level.remove_child(star)
 	
-	current_level = level2
-	await launch_level(level2)
+	current_level = next_level
+	await launch_level(next_level)
 	
 	Transition.fade_out()
 

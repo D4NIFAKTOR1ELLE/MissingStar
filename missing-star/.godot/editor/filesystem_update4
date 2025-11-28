@@ -19,3 +19,4 @@ res://game/transition.gd
 res://game/LevelEnd.tscn
 res://game/level_end.gd
 res://game/globals.gd
+res://levels/level.gd

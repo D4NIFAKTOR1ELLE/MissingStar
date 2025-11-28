@@ -2,6 +2,10 @@ extends CanvasLayer
 
 func _on_start_pressed() -> void:
 	get_tree().root.get_node("Game").start_game()
+	
+	Transition.fade_out()
+	
+	queue_free()
 
 func _on_credits_pressed() -> void:
 	pass # Replace with function body.
