@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://6e50iphxju6v"]
+
+[ext_resource type="Script" uid="uid://kedsisfqyj1d" path="res://game/transition.gd" id="1_4ciay"]
+
+[sub_resource type="Animation" id="Animation_srgsg"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Screen:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bbqhf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Screen:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4ciay"]
+resource_name = "fade_out"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Screen:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e6xs0"]
+_data = {
+&"RESET": SubResource("Animation_bbqhf"),
+&"fade_in": SubResource("Animation_srgsg"),
+&"fade_out": SubResource("Animation_4ciay")
+}
+
+[node name="Transition" type="CanvasLayer"]
+script = ExtResource("1_4ciay")
+
+[node name="Screen" type="ColorRect" parent="."]
+offset_left = -12.0
+offset_top = -8.0
+offset_right = 1164.0
+offset_bottom = 661.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_e6xs0")
+}

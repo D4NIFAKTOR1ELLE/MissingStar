@@ -8,9 +8,11 @@ var camera
 
 const SPEED = 420.0
 const JUMP_VELOCITY = -420.0
+var jump_range: int = 400
 
 var can_doublejump = true
 var star_ref
+var game_ref
 
 func initialise():
 	viewport = $SubViewport
@@ -28,18 +30,9 @@ func save_to():
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		can_doublejump = true
-		jump()
-	elif Input.is_action_just_pressed("jump") and !is_on_floor() and can_doublejump:
-		can_doublejump = false  
-		jump()
 		
-	if Input.is_action_just_pressed("right_click"):
-		save_to()
-
 	var direction := Input.get_axis("left", "right")
+
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -50,6 +43,14 @@ func _physics_process(delta: float) -> void:
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("left_click"):
 		await fly()
+	if Input.is_action_just_pressed("right_click"):
+		save_to()
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		can_doublejump = true
+		jump()
+	if Input.is_action_just_pressed("jump") and !is_on_floor() and can_doublejump:
+		can_doublejump = false  
+		jump()
 
 func jump():
 	velocity.y = JUMP_VELOCITY
@@ -58,15 +59,34 @@ func jump():
 func fly():
 	var star_position = star_ref.global_position
 
+	var angle = star_position.direction_to(global_position).angle()
+	
+	var final_position: Vector2 = Vector2(
+		global_position.x - jump_range * cos(angle),
+		global_position.y - jump_range * sin(angle)
+	)
+
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "global_position", star_position, 0.3)
+	tween.tween_property(self, "global_position", final_position, 0.3)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	await die()
 
 func die():
-	set_physics_process(false)
+	stop(false)
+
+	Transition.fade_in()
+	await Transition.animplayer.animation_finished
+
+	await game_ref.respawn()
+	await stop(true)
 	
+	Transition.fade_out()
+	
+func stop(enable: bool = false):
+	set_physics_process(enable)
+	set_process_input(enable)
+
 func set_camera_limits(map: Control):
 	if map == null:
 		return

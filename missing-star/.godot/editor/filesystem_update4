@@ -14,3 +14,8 @@ res://ui/StartScreen.tscn
 res://ui/start_screen.gd
 res://temp/Boot.tscn
 res://default_bus_layout.tres
+res://game/Transition.tscn
+res://game/transition.gd
+res://game/LevelEnd.tscn
+res://game/level_end.gd
+res://game/globals.gd
