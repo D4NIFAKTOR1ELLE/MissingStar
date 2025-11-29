@@ -82,6 +82,10 @@ texture = ExtResource("2_lbu4x")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_vi6ws")
+volume_db = -20.991
+pitch_scale = 0.89
+autoplay = true
+parameters/looping = true
 
 [node name="Spawn" type="Marker2D" parent="."]
 position = Vector2(125, 1276)

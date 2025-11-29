@@ -273,7 +273,8 @@ animation = &"Level1"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_hgosa")
-volume_db = -20.036
+volume_db = -13.358
+bus = &"SE"
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 rect = Rect2(-20, -19, 40, 40)

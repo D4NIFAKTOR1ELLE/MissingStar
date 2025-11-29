@@ -1,13 +1,13 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1764430166
+::res://::1764443199
 default_bus_layout.tres::AudioBusLayout::4595527809284958627::1764415804::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1764354940::0::1::::<><><>0<>0<><>::
-game.gd::GDScript::2119083128624968817::1764430166::0::1::::<>Node<><>0<>0<><>::
-Game.tscn::PackedScene::673609136865134389::1764417734::0::1::::<><><>0<>0<><>::uid://5gq8v5l6uwqj::::res://game.gd<>uid://bpyhjseyq21qq::::res://ui/StartScreen.tscn
+game.gd::GDScript::2119083128624968817::1764443199::0::1::::<>Node<><>0<>0<><>::
+Game.tscn::PackedScene::673609136865134389::1764442396::0::1::::<><><>0<>0<><>::uid://5gq8v5l6uwqj::::res://game.gd<>uid://bpyhjseyq21qq::::res://ui/StartScreen.tscn
 icon.svg::CompressedTexture2D::1862139378208412729::1764344948::1764344958::1::::<><><>0<>0<>15333cf13a87519e8de3e043b32d2b7d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 sound.gd::GDScript::1096313685041945984::1764350385::0::1::::<>CanvasLayer<><>0<>0<><>::
-::res://components/::1764425864
-snowman.gd::GDScript::3403297717824369291::1764423233::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://components/::1764443056
+snowman.gd::GDScript::3403297717824369291::1764443056::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Snowman.tscn::PackedScene::1660696527507006319::1764425864::0::1::::<><><>0<>0<><>::uid://boqt20rk188r4::::res://components/snowman.gd<>uid://dqi76nj0x3vd1::::res://img/snowman/snowman_idle.png<>uid://clhaga4r34bd::::res://img/snowman/snowman_rise.png<>uid://c71tj0etc6ob2::::res://music/swing-whoosh-110410.mp3<>uid://dceu4colyckxo::::res://img/snowman/snowman_fall.png<>uid://ddpsvyiqikowk::::res://img/snowman/snowman_dash_start.png<>uid://dkqgt7tupgcxh::::res://img/snowman/snowman_2_idle.png<>uid://dmw731m27o0qf::::res://img/snowman/snowman_dash.png<>uid://dmh37xvuq4dt0::::res://img/snowman/snowman_2_rise.png<>uid://y45njgdxfuh3::::res://img/snowman/snowman_2_fall.png<>uid://dcxlxmccvlr0e::::res://img/snowman/snowman_3_idle.png<>uid://ne56186sxkoo::::res://img/snowman/snowman_3_rise.png<>uid://bmlag32ikohvu::::res://img/snowman/snowman_3_fall.png
 star.gd::GDScript::6652494092481742460::1764359006::0::1::::<>Sprite2D<><>0<>0<><>::
 Star.tscn::PackedScene::7954675553011224889::1764363881::0::1::::<><><>0<>0<><>::uid://c11ruui4chcwq::::res://components/star.gd<>uid://btmeukmnx8gbc::::res://img/star.png
@@ -57,7 +57,7 @@ inbetween2.png::CompressedTexture2D::3637004776949663085::1764440111::1764440126
 level1.png::CompressedTexture2D::7395300353961251808::1764441237::1764441241::1::::<><><>0<>0<>b4cc5891975046ee3346150dbea71f89<>res://.godot/imported/level1.png-6a3f17d482cc8178b28a56b5d94da065.ctex::
 moon.png::CompressedTexture2D::5210757112586525595::1764407207::1764407210::1::::<><><>0<>0<>3d8d67ac43ffc6f302b5bdcd5494f88e<>res://.godot/imported/moon.png-6972a0a110a5b57ecc534f0b1a7e97da.ctex::
 snowfall.png::CompressedTexture2D::3321100913888157727::1764407183::1764407210::1::::<><><>0<>0<>d8cad103a2c984a3d80257e27ec8cc0f<>res://.godot/imported/snowfall.png-4c8aabf3dbc2dfa72782a8efde9233a6.ctex::
-title.png::CompressedTexture2D::3662240163205111978::1764441960::1764441960::1::::<><><>0<>0<>327a451d584854d8a4b45c9f3d305754<>res://.godot/imported/title.png-903aa1e7c0716a6635c8054b98812f7d.ctex::
+title.png::CompressedTexture2D::3662240163205111978::1764443871::1764443872::1::::<><><>0<>0<>327a451d584854d8a4b45c9f3d305754<>res://.godot/imported/title.png-903aa1e7c0716a6635c8054b98812f7d.ctex::
 ::res://img/snowman/::1764416731
 snowman_2_fall.png::CompressedTexture2D::1746244409430507986::1764416389::1764416603::1::::<><><>0<>0<>900654d0bb3fc7cfe76b75babc9e8ac2<>res://.godot/imported/snowman_2_fall.png-4537bdc239d39d9a7ddc3589f65b1de7.ctex::
 snowman_2_idle.png::CompressedTexture2D::7894580474592856189::1764416408::1764416646::1::::<><><>0<>0<>a9ec4dd8d6b999688da81a32dc9ea5c0<>res://.godot/imported/snowman_2_idle.png-b2e857ede6742a64ea50cdc9eb71de12.ctex::
@@ -84,12 +84,13 @@ Frank Wess - Rainy Afternoon.mp3::AudioStreamMP3::1463062360379950175::176435544
 Peggy Lee - Happy Holiday (Official Video).mp3::AudioStreamMP3::4074342044528142659::1764355440::1764355460::1::::<><><>0<>0<>3f8ff64efc7f21e45275dd9bc3239c0b<>res://.godot/imported/Peggy Lee - Happy Holiday (Official Video).mp3-0b976b0fddfec2f4d23785ee6339317d.mp3str::
 swing-whoosh-110410.mp3::AudioStreamMP3::7073729200546651117::1764350379::1764350406::1::::<><><>0<>0<>3b6b825a5077b3a853f942866f37f9ed<>res://.godot/imported/swing-whoosh-110410.mp3-eba3c261c85bd2b107fd2d8754f4487d.mp3str::
 The Supremes - My Favorite Things (Official Video).mp3::AudioStreamMP3::1886454116724446063::1764355441::1764355460::1::::<><><>0<>0<>f574d4befa52a1a9e445fdda85f764e8<>res://.godot/imported/The Supremes - My Favorite Things (Official Video).mp3-5bdb3688ae988db24abb7b228a392f2a.mp3str::
-::res://ui/::1764440666
-ControlHint.tscn::PackedScene::8920138737721278194::1764348809::0::1::::<><><>0<>0<><>::
+::res://ui/::1764443761
+ControlHint.tscn::PackedScene::8920138737721278194::1764443241::0::1::::<><><>0<>0<><>::uid://bxy5nqxtnhpek::::res://ui/end_screen.tres<>uid://bytr1dsg0ft2g::::res://ui/control_hint.gd
 EndScreen.tscn::PackedScene::2048091320866689273::1764431044::0::1::::<><><>0<>0<><>::uid://bxy5nqxtnhpek::::res://ui/end_screen.tres<>uid://cxq0btv3whq5q::::res://ui/end_screen.gd
 end_screen.gd::GDScript::6421735557425401252::1764430994::0::1::::<>CanvasLayer<><>0<>0<><>::
-end_screen.tres::Theme::4052154755354079990::1764419807::0::1::::<><><>0<>0<><>::uid://bnusqp34j6u52::::res://components/font/Cinzel-Regular.otf
+end_screen.tres::Theme::4052154755354079990::1764442301::0::1::::<><><>0<>0<><>::uid://bnusqp34j6u52::::res://components/font/Cinzel-Regular.otf
 InBetween.tscn::PackedScene::6011581553922581927::1764440666::0::1::::<><><>0<>0<><>::uid://cum5esp2vacne::::res://ui/in_between.gd<>uid://br2164r1fo5yf::::res://img/parallax_layers/inbetween2.png
 in_between.gd::GDScript::6203220396001371702::1764430124::0::1::::<>CanvasLayer<><>0<>0<><>::
-StartScreen.tscn::PackedScene::3489240448167974384::1764427135::0::1::::<><><>0<>0<><>::uid://b8r1u5mofr2w4::::res://ui/start_screen.gd<>uid://bnusqp34j6u52::::res://components/font/Cinzel-Regular.otf
-start_screen.gd::GDScript::4739362898138846989::1764362680::0::1::::<>CanvasLayer<><>0<>0<><>::
+control_hint.gd::GDScript::4111254913534341472::1764442909::0::1::::<>CanvasLayer<><>0<>0<><>::
+StartScreen.tscn::PackedScene::3489240448167974384::1764443761::0::1::::<><><>0<>0<><>::uid://b8r1u5mofr2w4::::res://ui/start_screen.gd<>uid://bsgatb4cd8sms::::res://img/parallax_layers/title.png<>uid://bnusqp34j6u52::::res://components/font/Cinzel-Regular.otf
+start_screen.gd::GDScript::4739362898138846989::1764443239::0::1::::<>CanvasLayer<><>0<>0<><>::

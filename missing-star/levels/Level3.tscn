@@ -59,6 +59,10 @@ position = Vector2(361, 8624)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_11ac5")
+volume_db = -18.128
+pitch_scale = 0.89
+autoplay = true
+parameters/looping = true
 
 [node name="GameEnd" type="Area2D" parent="."]
 position = Vector2(1040, 446)
