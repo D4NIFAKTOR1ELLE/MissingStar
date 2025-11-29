@@ -1,4 +1,6 @@
 Sprite2D
+CollisionShape2D
+Area2D
 TextureRect
 AnimationPlayer
 ColorRect
@@ -9,6 +11,4 @@ AnimatedSprite2D
 Label
 GridContainer
 RichTextLabel
-CollisionShape2D
 StaticBody2D
-Area2D

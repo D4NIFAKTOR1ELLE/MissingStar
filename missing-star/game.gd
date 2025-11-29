@@ -23,6 +23,9 @@ func start_game():
 	launch_level(level1)
 
 func launch_level(level: PackedScene):
+	if is_instance_valid(current_level):
+		current_level.queue_free()
+	
 	current_level = level.instantiate()
 	add_child(current_level)
 	
@@ -41,8 +44,7 @@ func end_level(next_level: PackedScene):
 	
 	current_level.remove_child(snowman)
 	current_level.remove_child(star)
-	
-	current_level = next_level
+
 	await launch_level(next_level)
 	
 	Transition.fade_out()

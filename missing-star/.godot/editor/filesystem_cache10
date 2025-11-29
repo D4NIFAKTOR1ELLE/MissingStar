@@ -1,49 +1,77 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1764406187
+::res://::1764415802
 default_bus_layout.tres::AudioBusLayout::4595527809284958627::1764400158::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1764354940::0::1::::<><><>0<>0<><>::
-game.gd::GDScript::2119083128624968817::1764406187::0::1::::<>Node<><>0<>0<><>::
-Game.tscn::PackedScene::673609136865134389::1764360974::0::1::::<><><>0<>0<><>::uid://5gq8v5l6uwqj::::res://game.gd<>uid://bpyhjseyq21qq::::res://ui/StartScreen.tscn
+game.gd::GDScript::2119083128624968817::1764413517::0::1::::<>Node<><>0<>0<><>::
+Game.tscn::PackedScene::673609136865134389::1764414187::0::1::::<><><>0<>0<><>::uid://5gq8v5l6uwqj::::res://game.gd<>uid://bpyhjseyq21qq::::res://ui/StartScreen.tscn
 icon.svg::CompressedTexture2D::1862139378208412729::1764344948::1764344958::1::::<><><>0<>0<>15333cf13a87519e8de3e043b32d2b7d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 sound.gd::GDScript::1096313685041945984::1764350385::0::1::::<>CanvasLayer<><>0<>0<><>::
-::res://components/::1764406481
-snowman.gd::GDScript::3403297717824369291::1764406481::0::1::::<>CharacterBody2D<><>0<>0<><>::
-Snowman.tscn::PackedScene::1660696527507006319::1764406030::0::1::::<><><>0<>0<><>::uid://boqt20rk188r4::::res://components/snowman.gd<>uid://dqi76nj0x3vd1::::res://img/snowman/snowman_idle.png<>uid://c71tj0etc6ob2::::res://music/swing-whoosh-110410.mp3
+::res://components/::1764413161
+snowman.gd::GDScript::3403297717824369291::1764410220::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Snowman.tscn::PackedScene::1660696527507006319::1764412619::0::1::::<><><>0<>0<><>::uid://boqt20rk188r4::::res://components/snowman.gd<>uid://dqi76nj0x3vd1::::res://img/snowman/snowman_idle.png<>uid://c71tj0etc6ob2::::res://music/swing-whoosh-110410.mp3
 star.gd::GDScript::6652494092481742460::1764359006::0::1::::<>Sprite2D<><>0<>0<><>::
 Star.tscn::PackedScene::7954675553011224889::1764363881::0::1::::<><><>0<>0<><>::uid://c11ruui4chcwq::::res://components/star.gd<>uid://btmeukmnx8gbc::::res://img/star.png
 sub_viewport.gd::GDScript::7653063212508892090::1764350146::0::1::::<>SubViewport<><>0<>0<><>::
-::res://game/::1764402380
+::res://components/font/::1764413236
+Bugs.txt::TextFile::-1::1308637860::0::1::::<><><>0<>0<><>::
+ChangeLog.txt::TextFile::-1::1308637860::0::1::::<><><>0<>0<><>::
+Cinzel-Regular.otf::FontFile::3341285517076664975::1336736034::1764413236::1::::<><><>0<>0<>f591f55a6a2d950163d821584bbe954f<>res://.godot/imported/Cinzel-Regular.otf-609642785f34a2ad5f2dcae5c939b0d7.fontdata::
+GingerBrand.ttf::FontFile::1959314576896180352::1709665256::1764413236::1::::<><><>0<>0<>de6c72e9d14ae9fd759c8fcfb6f37598<>res://.godot/imported/GingerBrand.ttf-490e3d07eb4d5a5a9e2e9cdd48a6d6f8.fontdata::
+LinLibertine_aBL.ttf::FontFile::8003279777343887855::1308637862::1764413236::1::::<><><>0<>0<>1a05fb5f487994c7c6965b6555eb9801<>res://.godot/imported/LinLibertine_aBL.ttf-b35f979732254f42d25fa7ac661ad17a.fontdata::
+LinLibertine_aBS.ttf::FontFile::5396426293044079295::1308637862::1764413236::1::::<><><>0<>0<>159c020518c8c39ce8fe072c52a1a7fb<>res://.godot/imported/LinLibertine_aBS.ttf-4851338c28e442fbc2ccd18d582334cb.fontdata::
+LinLibertine_aDRS.ttf::FontFile::6949938511625224315::1308637862::1764413236::1::::<><><>0<>0<>0a2472f7cd4141a04e859fdca5b11ef7<>res://.godot/imported/LinLibertine_aDRS.ttf-c49f8e4cbc32d01cfc42ad0b0df26d55.fontdata::
+LinLibertine_aRL.ttf::FontFile::2857038487932461114::1308637862::1764413236::1::::<><><>0<>0<>17dd41aa59376c34c4c81d6dd1020482<>res://.godot/imported/LinLibertine_aRL.ttf-21ba64e83761dbf82b8f6cd6a4eb7c1f.fontdata::
+LinLibertine_aS.ttf::FontFile::5203399430472889803::1308637862::1764413236::1::::<><><>0<>0<>1870caa50356762a56629c33b344fec9<>res://.godot/imported/LinLibertine_aS.ttf-c82f0bc80c06b2c1906f708ee9994061.fontdata::
+LinLibertine_aSI.ttf::FontFile::8414520128848622816::1308637862::1764413236::1::::<><><>0<>0<>59668e7bb935dcc41000b7ca66bde293<>res://.godot/imported/LinLibertine_aSI.ttf-692b28be0adf8772cacd114cc3a134ab.fontdata::
+LinLibertine_aSZI.ttf::FontFile::4403125641417244418::1308637862::1764413236::1::::<><><>0<>0<>5115fe4d1bfed8b60cc06ab8d554428b<>res://.godot/imported/LinLibertine_aSZI.ttf-64c620c4493390b89173388b95bc93cb.fontdata::
+LinLibertine_aZL.ttf::FontFile::8533370224187943145::1308637862::1764413236::1::::<><><>0<>0<>1ec66cfcaaeaef90e1be33c77a9d6af0<>res://.godot/imported/LinLibertine_aZL.ttf-27b65d7a16b3cf4893e30f74f862a7f4.fontdata::
+LinLibertine_DR.ttf::FontFile::2789427551191777851::1308637862::1764413236::1::::<><><>0<>0<>abfe6bd3425cf13f1679310f4911afb9<>res://.godot/imported/LinLibertine_DR.ttf-f299a20ab2fbe68f5fe6ef6a7735fc6e.fontdata::
+LinLibertine_I.ttf::FontFile::7514634489466644629::1308637862::1764413236::1::::<><><>0<>0<>92cbc3d3c1269955b0de138568ae1593<>res://.godot/imported/LinLibertine_I.ttf-c49ed4896420179308f950abd1a3fe78.fontdata::
+LinLibertine_R.ttf::FontFile::1577388024788778491::1308637862::1764413236::1::::<><><>0<>0<>7a670067cc3c7c720a1d143f88206ad6<>res://.godot/imported/LinLibertine_R.ttf-d9e99126f7be0b418e80fa337890d633.fontdata::
+LinLibertine_RB.ttf::FontFile::4164874054720774884::1308637862::1764413236::1::::<><><>0<>0<>990034e790c8601fc346543a62dd051a<>res://.godot/imported/LinLibertine_RB.ttf-1de70691af49283794caf77ccdff08c7.fontdata::
+LinLibertine_RBI.ttf::FontFile::2939695013236650922::1308637862::1764413236::1::::<><><>0<>0<>6b3c05c7890bcef9c8d77d3e22bd9ccb<>res://.godot/imported/LinLibertine_RBI.ttf-a02b814186461272183fa09506c25b0b.fontdata::
+LinLibertine_RI.ttf::FontFile::5947527177746825135::1308637862::1764413236::1::::<><><>0<>0<>d7b53f5d17e0da66d626b44054472271<>res://.godot/imported/LinLibertine_RI.ttf-1507165fd02f51501c5e3e97c4f4419c.fontdata::
+LinLibertine_RZ.ttf::FontFile::335034064267913760::1308637862::1764413236::1::::<><><>0<>0<>b2188375914d1bf625d7fb8af2cfe9dc<>res://.godot/imported/LinLibertine_RZ.ttf-1971b70e038ddba66fdb6cf038368c76.fontdata::
+LinLibertine_RZI.ttf::FontFile::268481471101063431::1308637862::1764413236::1::::<><><>0<>0<>5e62deef421e13d5a1c2a96f032f9d56<>res://.godot/imported/LinLibertine_RZI.ttf-f1f687e1830183ef855f91bee74e9200.fontdata::
+NewYork PERSONAL USE.otf::FontFile::8258272171972752953::1602916498::1764413236::1::::<><><>0<>0<>5bab01f932e11c54c27c5fe5df9c7935<>res://.godot/imported/NewYork PERSONAL USE.otf-740c95048648c431830a978ce8670d53.fontdata::
+READ ME FIRST.txt::TextFile::-1::1645500754::0::1::::<><><>0<>0<><>::
+::res://game/::1764413906
 globals.gd::GDScript::5277393323628747456::1764361258::0::1::::<>Node<><>0<>0<><>::
 LevelEnd.tscn::PackedScene::2937458412570394210::1764402380::0::1::::<><><>0<>0<><>::uid://bf618y8cadf3b::::res://game/level_end.gd<>uid://bdh07b4fabsv6::::res://img/level_end.png
-level_end.gd::GDScript::2802999496899850341::1764363199::0::1::::<>Area2D<><>0<>0<><>::
-MovingPlatform.tscn::PackedScene::6076963826412373311::1764402054::0::1::::<><><>0<>0<><>::
+level_end.gd::GDScript::2802999496899850341::1764413366::0::1::::<>Area2D<><>0<>0<><>::
+MovingPlatform.tscn::PackedScene::6076963826412373311::1764413088::0::1::::<><><>0<>0<><>::uid://cuuo3437mduld::::res://game/moving_platform.gd
+moving_platform.gd::GDScript::6218807403257901729::1764413053::0::1::::<>StaticBody2D<><>0<>0<><>::
+SecretOrnament.tscn::PackedScene::399663596114028936::1764413906::0::1::::<><><>0<>0<><>::
+TempPlatform.tscn::PackedScene::8053591030842052128::1764411679::0::1::::<><><>0<>0<><>::
 transition.gd::GDScript::710360690907944187::1764360822::0::1::::<>CanvasLayer<><>0<>0<><>::
-Transition.tscn::PackedScene::2185978262133888347::1764360956::0::1::::<><><>0<>0<><>::uid://kedsisfqyj1d::::res://game/transition.gd
+Transition.tscn::PackedScene::2185978262133888347::1764408250::0::1::::<><><>0<>0<><>::uid://kedsisfqyj1d::::res://game/transition.gd
 ::res://img/::1764402353
 collisiontile32.png::CompressedTexture2D::5533426870569550082::1764349253::1764349254::1::::<><><>0<>0<>c15b7dc60964af63d35136e75e87b178<>res://.godot/imported/collisiontile32.png-587fafd20f9484b46bc85fc9d6edcd57.ctex::
 level_end.png::CompressedTexture2D::2613013026659651097::1764401001::1764401052::1::::<><><>0<>0<>ec04be2a8bf30b2b9311d5d4e7045bbb<>res://.godot/imported/level_end.png-f48d71d3b094045eee42c24ba7e786cb.ctex::
 star.png::CompressedTexture2D::3745060374107452116::1764401014::1764401052::1::::<><><>0<>0<>568803f1686095c802a461b3fe7af1b4<>res://.godot/imported/star.png-d9e21300bfdce2df88dc348114f24979.ctex::
-::res://img/parallax_layers/::1764407207
+::res://img/parallax_layers/::1764407210
 cloud_parallax.png::CompressedTexture2D::1719478913553678160::1764349271::1764402354::1::::<><><>0<>0<>4a257c8c5b6256c6d7fde81e7b458354<>res://.godot/imported/cloud_parallax.png-4b3cbbe92a3f5721d781e0f8f45cc5e3.ctex::
 moon.png::CompressedTexture2D::5210757112586525595::1764407207::1764407210::1::::<><><>0<>0<>3d8d67ac43ffc6f302b5bdcd5494f88e<>res://.godot/imported/moon.png-6972a0a110a5b57ecc534f0b1a7e97da.ctex::
 snowfall.png::CompressedTexture2D::3321100913888157727::1764407183::1764407210::1::::<><><>0<>0<>d8cad103a2c984a3d80257e27ec8cc0f<>res://.godot/imported/snowfall.png-4c8aabf3dbc2dfa72782a8efde9233a6.ctex::
 ::res://img/snowman/::1764401237
 snowman_idle.png::CompressedTexture2D::8300797572574416004::1764401236::1764401237::1::::<><><>0<>0<>6ecff8147b7c7be10016cfb40e08b87b<>res://.godot/imported/snowman_idle.png-7ffd7d12421c0d96b74261561725e4f5.ctex::
-::res://levels/::1764406558
+::res://levels/::1764414164
 collision_tileset.tres::TileSet::1513738141687946612::1764400641::0::1::::<><><>0<>0<><>::uid://ck3oy5la7uat3::::res://img/collisiontile32.png
-Level1.tscn::PackedScene::6888390698089755063::1764406558::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://b4k7redskqs38::::res://levels/level.gd<>uid://bh36rmt5w8d03::::res://game/LevelEnd.tscn<>uid://142vg8o2i5pj::::res://music/The Supremes - My Favorite Things (Official Video).mp3<>uid://b1uwhhd4ja70y::::res://levels/Level2.tscn
-Level2.tscn::PackedScene::4253966821388891482::1764402573::0::1::::<><><>0<>0<><>::uid://b4k7redskqs38::::res://levels/level.gd<>uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://bh36rmt5w8d03::::res://game/LevelEnd.tscn<>uid://bybv223yg6k3l::::res://music/Peggy Lee - Happy Holiday (Official Video).mp3<>uid://cf5makudwm4vy::::res://levels/Level3.tscn
-Level3.tscn::PackedScene::5186446078407156214::1764402885::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://chl84mqvte2ik::::res://music/Ella Fitzgerald - Frosty The Snowman (Official Video).mp3
-level.gd::GDScript::4444514444561213505::1764363404::0::1::::<>Node<><>0<>0<><>::
+Level1.tscn::PackedScene::6888390698089755063::1764413545::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://b4k7redskqs38::::res://levels/level.gd<>uid://bh36rmt5w8d03::::res://game/LevelEnd.tscn<>uid://cgien5brwsdfv::::res://img/parallax_layers/moon.png<>uid://142vg8o2i5pj::::res://music/The Supremes - My Favorite Things (Official Video).mp3<>uid://b1uwhhd4ja70y::::res://levels/Level2.tscn<>uid://qgxeslklugt8::::res://levels/SnowParallax.tscn
+Level2.tscn::PackedScene::4253966821388891482::1764413836::0::1::::<><><>0<>0<><>::uid://b4k7redskqs38::::res://levels/level.gd<>uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://bh36rmt5w8d03::::res://game/LevelEnd.tscn<>uid://cgien5brwsdfv::::res://img/parallax_layers/moon.png<>uid://bybv223yg6k3l::::res://music/Peggy Lee - Happy Holiday (Official Video).mp3<>uid://cf5makudwm4vy::::res://levels/Level3.tscn
+Level3.tscn::PackedScene::5186446078407156214::1764414164::0::1::::<><><>0<>0<><>::uid://dmttu81feto2g::::res://levels/level_3.gd<>uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://chl84mqvte2ik::::res://music/Ella Fitzgerald - Frosty The Snowman (Official Video).mp3<>uid://cgien5brwsdfv::::res://img/parallax_layers/moon.png
+level.gd::GDScript::4444514444561213505::1764413356::0::1::::<>Node<><>0<>0<><>::
+level_3.gd::GDScript::8041942464472244172::1764414164::0::1::::<>Node<><>0<>0<><>::
+SnowParallax.tscn::PackedScene::1136812361625123855::1764407965::0::1::::<><><>0<>0<><>::uid://bnk1bueyneea6::::res://img/parallax_layers/snowfall.png
 ::res://music/::1764355460
 Ella Fitzgerald - Frosty The Snowman (Official Video).mp3::AudioStreamMP3::5288927532908417014::1764355436::1764355460::1::::<><><>0<>0<>5114849add614093a1209f6abd1a7350<>res://.godot/imported/Ella Fitzgerald - Frosty The Snowman (Official Video).mp3-9808eb05f3d978bada5334c061f8206e.mp3str::
 Frank Wess - Rainy Afternoon.mp3::AudioStreamMP3::1463062360379950175::1764355445::1764355460::1::::<><><>0<>0<>8ddd844f020ac0f8ed0eca259f402221<>res://.godot/imported/Frank Wess - Rainy Afternoon.mp3-befd035f3551533374875b0d06494815.mp3str::
 Peggy Lee - Happy Holiday (Official Video).mp3::AudioStreamMP3::4074342044528142659::1764355440::1764355460::1::::<><><>0<>0<>3f8ff64efc7f21e45275dd9bc3239c0b<>res://.godot/imported/Peggy Lee - Happy Holiday (Official Video).mp3-0b976b0fddfec2f4d23785ee6339317d.mp3str::
 swing-whoosh-110410.mp3::AudioStreamMP3::7073729200546651117::1764350379::1764350406::1::::<><><>0<>0<>3b6b825a5077b3a853f942866f37f9ed<>res://.godot/imported/swing-whoosh-110410.mp3-eba3c261c85bd2b107fd2d8754f4487d.mp3str::
 The Supremes - My Favorite Things (Official Video).mp3::AudioStreamMP3::1886454116724446063::1764355441::1764355460::1::::<><><>0<>0<>f574d4befa52a1a9e445fdda85f764e8<>res://.godot/imported/The Supremes - My Favorite Things (Official Video).mp3-5bdb3688ae988db24abb7b228a392f2a.mp3str::
-::res://ui/::1764403549
+::res://ui/::1764414202
 ControlHint.tscn::PackedScene::8920138737721278194::1764348809::0::1::::<><><>0<>0<><>::
 EndScreen.tscn::PackedScene::2048091320866689273::1764403549::0::1::::<><><>0<>0<><>::uid://bxy5nqxtnhpek::::res://ui/end_screen.tres
 end_screen.tres::Theme::4052154755354079990::1764403549::0::1::::<><><>0<>0<><>::
-StartScreen.tscn::PackedScene::3489240448167974384::1764362462::0::1::::<><><>0<>0<><>::uid://b8r1u5mofr2w4::::res://ui/start_screen.gd
+StartScreen.tscn::PackedScene::3489240448167974384::1764414202::0::1::::<><><>0<>0<><>::uid://b8r1u5mofr2w4::::res://ui/start_screen.gd
 start_screen.gd::GDScript::4739362898138846989::1764362680::0::1::::<>CanvasLayer<><>0<>0<><>::

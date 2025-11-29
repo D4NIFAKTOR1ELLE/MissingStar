@@ -4,3 +4,5 @@ extends Area2D
 
 func _on_body_entered(_body: Node2D) -> void:
 	Globals.game.end_level(next_level)
+
+	self.queue_free()

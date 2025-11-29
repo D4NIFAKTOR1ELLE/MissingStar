@@ -1,14 +1,5 @@
 res://default_bus_layout.tres
-res://components/Snowman.tscn
-res://levels/collision_tileset.tres
-res://levels/Level3.tscn
-res://levels/Level1.tscn
-res://components/snowman.gd
-res://game/MovingPlatform.tscn
-res://game/LevelEnd.tscn
-res://levels/Level2.tscn
 res://ui/EndScreen.tscn
-res://ui/end_screen.tres
-res://game.gd
-res://game/Transition.tscn
-res://game/TempPlatform.tscn
+res://levels/collision_tileset.tres
+res://components/Snowman.tscn
+res://levels/level_3.gd

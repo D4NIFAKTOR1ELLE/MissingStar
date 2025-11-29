@@ -8,12 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://b1uwhhd4ja70y" path="res://levels/Level2.tscn" id="4_2j4y6"]
 [ext_resource type="PackedScene" uid="uid://qgxeslklugt8" path="res://levels/SnowParallax.tscn" id="7_gqfrg"]
 
-[sub_resource type="Gradient" id="Gradient_cr8f5"]
+[sub_resource type="Gradient" id="Gradient_gqfrg"]
 offsets = PackedFloat32Array(0, 0.8066667, 1)
 colors = PackedColorArray(0.035073083, 0.008909176, 0.06593647, 1, 0.11567228, 0.11507086, 0.17628524, 1, 0.16470589, 0.16470589, 0.25490198, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vi6ws"]
-gradient = SubResource("Gradient_cr8f5")
+gradient = SubResource("Gradient_gqfrg")
 fill_to = Vector2(0, 1)
 
 [node name="Level1" type="Node"]
@@ -53,7 +53,7 @@ tile_set = ExtResource("1_32mhh")
 stream = ExtResource("3_vi6ws")
 
 [node name="Spawn" type="Marker2D" parent="."]
-position = Vector2(107, 972)
+position = Vector2(7305, 434)
 
 [node name="LevelEnd" parent="." instance=ExtResource("2_32mhh")]
 position = Vector2(7495, 375)

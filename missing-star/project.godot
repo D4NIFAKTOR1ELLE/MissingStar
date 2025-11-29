@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Transition="*res://game/Transition.tscn"
 Globals="*res://game/globals.gd"
 
+[gui]
+
+theme/custom_font="uid://bnusqp34j6u52"
+
 [input]
 
 left_click={
