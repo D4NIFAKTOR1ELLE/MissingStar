@@ -1,11 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://xwpouem86pmt"]
+[gd_scene load_steps=24 format=3 uid="uid://xwpouem86pmt"]
 
 [ext_resource type="Script" uid="uid://boqt20rk188r4" path="res://components/snowman.gd" id="1_y2cei"]
 [ext_resource type="Texture2D" uid="uid://dqi76nj0x3vd1" path="res://img/snowman/snowman_idle.png" id="2_17qwc"]
 [ext_resource type="Texture2D" uid="uid://clhaga4r34bd" path="res://img/snowman/snowman_rise.png" id="3_4l7dg"]
 [ext_resource type="AudioStream" uid="uid://c71tj0etc6ob2" path="res://music/swing-whoosh-110410.mp3" id="3_hgosa"]
 [ext_resource type="Texture2D" uid="uid://dceu4colyckxo" path="res://img/snowman/snowman_fall.png" id="4_tltqe"]
+[ext_resource type="Texture2D" uid="uid://ddpsvyiqikowk" path="res://img/snowman/snowman_dash_start.png" id="5_8xx6i"]
 [ext_resource type="Texture2D" uid="uid://dkqgt7tupgcxh" path="res://img/snowman/snowman_2_idle.png" id="5_uj4js"]
+[ext_resource type="Texture2D" uid="uid://dmw731m27o0qf" path="res://img/snowman/snowman_dash.png" id="6_pacwq"]
 [ext_resource type="Texture2D" uid="uid://dmh37xvuq4dt0" path="res://img/snowman/snowman_2_rise.png" id="6_q8d5x"]
 [ext_resource type="Texture2D" uid="uid://y45njgdxfuh3" path="res://img/snowman/snowman_2_fall.png" id="7_2ewl0"]
 [ext_resource type="Texture2D" uid="uid://dcxlxmccvlr0e" path="res://img/snowman/snowman_3_idle.png" id="8_70rs2"]
@@ -26,6 +28,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_tltqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8xx6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pacwq")
 }],
 "loop": false,
 "name": &"Level1",
@@ -40,6 +48,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_2ewl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8xx6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pacwq")
 }],
 "loop": true,
 "name": &"Level2",
@@ -54,6 +68,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_8xx6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8xx6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pacwq")
 }],
 "loop": true,
 "name": &"Level3",
@@ -62,9 +82,50 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_70rs2"]
 resource_name = "dash_init"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 3, 4]
+}
 
 [sub_resource type="Animation" id="Animation_5gynt"]
 resource_name = "dash_exit"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [4, 3, 2]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_recovery"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_8xx6i"]
 resource_name = "rise"
@@ -95,6 +156,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_pacwq"]
@@ -130,6 +203,48 @@ tracks/0/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sqbym"]
+resource_name = "recovery"
+length = 0.1
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0.6264139, 0.77326906, 0.9317836, 1), Color(0.5432644, 0.6273714, 0.8525231, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8xx6i"]
 _data = {
@@ -138,6 +253,7 @@ _data = {
 &"dash_init": SubResource("Animation_70rs2"),
 &"fall": SubResource("Animation_pacwq"),
 &"idle": SubResource("Animation_yrv37"),
+&"recovery": SubResource("Animation_sqbym"),
 &"rise": SubResource("Animation_8xx6i")
 }
 

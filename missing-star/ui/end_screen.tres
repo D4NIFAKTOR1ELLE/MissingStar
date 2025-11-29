@@ -1,6 +1,13 @@
-[gd_resource type="Theme" format=3 uid="uid://bxy5nqxtnhpek"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bxy5nqxtnhpek"]
+
+[ext_resource type="FontFile" uid="uid://bnusqp34j6u52" path="res://components/font/Cinzel-Regular.otf" id="1_3e0m8"]
+
+[sub_resource type="FontVariation" id="FontVariation_06pqn"]
+base_font = ExtResource("1_3e0m8")
+variation_embolden = 0.49
 
 [resource]
 GridContainer/constants/h_separation = 220
 GridContainer/constants/v_separation = 50
 Label/font_sizes/font_size = 26
+Label/fonts/font = SubResource("FontVariation_06pqn")

@@ -25,10 +25,10 @@ bbcode_enabled = true
 text = "[center][color=yellow]YOU SAVED CHRISTMAS![/color][/center]"
 
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 278.0
-offset_top = 195.0
-offset_right = 930.0
-offset_bottom = 499.0
+offset_left = 272.0
+offset_top = 209.0
+offset_right = 924.0
+offset_bottom = 513.0
 theme = ExtResource("1_iuj6g")
 columns = 2
 
@@ -56,4 +56,5 @@ THE NICE LIST?"
 
 [node name="OfCourse" type="Label" parent="GridContainer"]
 layout_mode = 2
-text = "OF COURSE"
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "OF COURSE :^)"
