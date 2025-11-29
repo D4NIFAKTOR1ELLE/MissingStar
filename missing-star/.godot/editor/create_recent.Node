@@ -1,5 +1,6 @@
 TextureRect
 CollisionShape2D
+StaticBody2D
 Area2D
 AnimationPlayer
 ColorRect
@@ -11,5 +12,3 @@ RichTextLabel
 AudioStreamPlayer
 Node
 VisibleOnScreenNotifier2D
-Camera2D
-TileMapLayer

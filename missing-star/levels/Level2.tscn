@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://b1uwhhd4ja70y"]
+[gd_scene load_steps=6 format=4 uid="uid://b1uwhhd4ja70y"]
 
 [ext_resource type="Script" uid="uid://b4k7redskqs38" path="res://levels/level.gd" id="1_432n0"]
 [ext_resource type="TileSet" uid="uid://vtjbthkqh33u" path="res://levels/collision_tileset.tres" id="1_gljt1"]
 [ext_resource type="PackedScene" uid="uid://bh36rmt5w8d03" path="res://game/LevelEnd.tscn" id="2_f5x84"]
+[ext_resource type="AudioStream" uid="uid://bybv223yg6k3l" path="res://music/Peggy Lee - Happy Holiday (Official Video).mp3" id="3_wnytt"]
 [ext_resource type="PackedScene" uid="uid://cf5makudwm4vy" path="res://levels/Level3.tscn" id="4_1hrej"]
 
 [node name="Level2" type="Node"]
@@ -23,6 +24,7 @@ tile_set = ExtResource("1_gljt1")
 position = Vector2(145, 634)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wnytt")
 
 [node name="LevelEnd" parent="." instance=ExtResource("2_f5x84")]
 position = Vector2(3123, 546)

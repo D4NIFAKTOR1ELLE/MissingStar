@@ -1,31 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://xwpouem86pmt"]
+[gd_scene load_steps=5 format=3 uid="uid://xwpouem86pmt"]
 
 [ext_resource type="Script" uid="uid://boqt20rk188r4" path="res://components/snowman.gd" id="1_y2cei"]
+[ext_resource type="Texture2D" uid="uid://dqi76nj0x3vd1" path="res://img/snowman/snowman_idle.png" id="2_17qwc"]
+[ext_resource type="AudioStream" uid="uid://c71tj0etc6ob2" path="res://music/swing-whoosh-110410.mp3" id="3_hgosa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb48l"]
-size = Vector2(40, 40)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y2cei"]
+size = Vector2(62, 80)
 
 [node name="Snowman" type="CharacterBody2D"]
 script = ExtResource("1_y2cei")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_cb48l")
 metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -20.0
-offset_top = -19.0
-offset_right = 20.0
-offset_bottom = 21.0
-texture = SubResource("PlaceholderTexture2D_y2cei")
-metadata/_edit_lock_ = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -46.0
+offset_right = 44.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_17qwc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hgosa")
+volume_db = -20.036
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 rect = Rect2(-20, -19, 40, 40)

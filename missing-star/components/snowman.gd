@@ -6,8 +6,8 @@ var viewport
 var sound
 var camera
 
-const SPEED = 420.0
-const JUMP_VELOCITY = -420.0
+const SPEED = 400.0
+const JUMP_VELOCITY = -380.0
 var jump_range: int = 400
 
 var can_doublejump = true

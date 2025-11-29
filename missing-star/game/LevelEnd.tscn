@@ -1,24 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://bh36rmt5w8d03"]
 
 [ext_resource type="Script" uid="uid://bf618y8cadf3b" path="res://game/level_end.gd" id="1_kuib0"]
+[ext_resource type="Texture2D" uid="uid://bdh07b4fabsv6" path="res://img/level_end.png" id="2_m5mcr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ib2gv"]
-size = Vector2(70, 70)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ib2gv"]
+size = Vector2(99, 96)
 
 [node name="LevelEnd" type="Area2D"]
 script = ExtResource("1_kuib0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_ib2gv")
 disabled = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -19.0
-offset_top = -20.0
-offset_right = 21.0
-offset_bottom = 20.0
-texture = SubResource("PlaceholderTexture2D_ib2gv")
+offset_left = -46.0
+offset_top = -46.0
+offset_right = 44.0
+offset_bottom = 44.0
+texture = ExtResource("2_m5mcr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
