@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://c5e112m6mgiyx"]
+[gd_scene load_steps=14 format=4 uid="uid://c5e112m6mgiyx"]
 
 [ext_resource type="TileSet" uid="uid://vtjbthkqh33u" path="res://levels/collision_tileset.tres" id="1_32mhh"]
 [ext_resource type="Script" uid="uid://b4k7redskqs38" path="res://levels/level.gd" id="1_ohbkr"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://142vg8o2i5pj" path="res://music/The Supremes - My Favorite Things (Official Video).mp3" id="3_vi6ws"]
 [ext_resource type="PackedScene" uid="uid://b1uwhhd4ja70y" path="res://levels/Level2.tscn" id="4_2j4y6"]
 [ext_resource type="PackedScene" uid="uid://qgxeslklugt8" path="res://levels/SnowParallax.tscn" id="7_gqfrg"]
+[ext_resource type="PackedScene" uid="uid://fxunvulnuip1" path="res://game/SecretOrnament.tscn" id="7_nn0v1"]
 
 [sub_resource type="Gradient" id="Gradient_gqfrg"]
 offsets = PackedFloat32Array(0, 0.8066667, 1)
@@ -79,6 +80,9 @@ offset_top = 1.0
 offset_right = 7684.0
 offset_bottom = 1386.0
 texture = ExtResource("2_lbu4x")
+
+[node name="SecretOrnament" parent="TextureRect2" instance=ExtResource("7_nn0v1")]
+position = Vector2(3363, 100)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_vi6ws")

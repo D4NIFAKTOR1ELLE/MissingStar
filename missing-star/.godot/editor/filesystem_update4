@@ -24,3 +24,5 @@ res://ui/ControlHint.tscn
 res://ui/control_hint.gd
 res://ui/start_screen.gd
 res://components/Star.tscn
+res://game/SecretOrnament.tscn
+res://game/secret_ornament.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://b1uwhhd4ja70y"]
+[gd_scene load_steps=13 format=4 uid="uid://b1uwhhd4ja70y"]
 
 [ext_resource type="Script" uid="uid://b4k7redskqs38" path="res://levels/level.gd" id="1_432n0"]
 [ext_resource type="TileSet" uid="uid://vtjbthkqh33u" path="res://levels/collision_tileset.tres" id="1_gljt1"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://yq6ti4hi3twy" path="res://img/parallax_layers/cloud_parallax.png" id="3_pixff"]
 [ext_resource type="AudioStream" uid="uid://bybv223yg6k3l" path="res://music/Peggy Lee - Happy Holiday (Official Video).mp3" id="3_wnytt"]
 [ext_resource type="PackedScene" uid="uid://cf5makudwm4vy" path="res://levels/Level3.tscn" id="4_1hrej"]
+[ext_resource type="PackedScene" uid="uid://fxunvulnuip1" path="res://game/SecretOrnament.tscn" id="5_5pn2a"]
 [ext_resource type="PackedScene" uid="uid://qgxeslklugt8" path="res://levels/SnowParallax.tscn" id="8_6m74g"]
 [ext_resource type="PackedScene" uid="uid://cstyyas8vk5tb" path="res://game/MovingPlatform.tscn" id="9_qcwkq"]
 
@@ -65,6 +66,9 @@ tile_set = ExtResource("1_gljt1")
 
 [node name="Spawn" type="Marker2D" parent="."]
 position = Vector2(9421, 1935)
+
+[node name="SecretOrnament" parent="Spawn" instance=ExtResource("5_5pn2a")]
+position = Vector2(-7172, -191)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_wnytt")
