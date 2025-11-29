@@ -12,3 +12,5 @@ res://levels/Level3.tscn
 res://ui/end_screen.tres
 res://levels/level.gd
 res://levels/InBetween.tscn
+res://ui/end_screen.gd
+res://game.gd

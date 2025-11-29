@@ -8,10 +8,19 @@ var level2 = preload("res://levels/Level2.tscn")
 var level3 = preload("res://levels/Level3.tscn")
 
 var current_level
+var time_elapsed := 0.0
 
 @onready var start_screen = $StartScreen
 
+func _ready():
+	set_physics_process(false)
+
+func _physics_process(delta: float) -> void:
+	time_elapsed += delta
+
 func start_game():
+	set_physics_process(true)
+	
 	Globals.game = self
 	snowman = snowman.instantiate()
 	star = star.instantiate()

@@ -70,3 +70,5 @@ shape = SubResource("RectangleShape2D_r8psn")
 
 [node name="Sprite2D" type="Sprite2D" parent="GameEnd"]
 texture = SubResource("PlaceholderTexture2D_3ns6d")
+
+[connection signal="body_entered" from="GameEnd" to="." method="_on_game_end_body_entered"]
