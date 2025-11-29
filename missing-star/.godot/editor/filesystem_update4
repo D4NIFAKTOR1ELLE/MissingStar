@@ -11,3 +11,4 @@ res://ui/EndScreen.tscn
 res://ui/end_screen.tres
 res://game.gd
 res://game/Transition.tscn
+res://game/TempPlatform.tscn

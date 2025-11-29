@@ -1,20 +1,48 @@
-[gd_scene load_steps=6 format=4 uid="uid://b1uwhhd4ja70y"]
+[gd_scene load_steps=9 format=4 uid="uid://b1uwhhd4ja70y"]
 
 [ext_resource type="Script" uid="uid://b4k7redskqs38" path="res://levels/level.gd" id="1_432n0"]
 [ext_resource type="TileSet" uid="uid://vtjbthkqh33u" path="res://levels/collision_tileset.tres" id="1_gljt1"]
 [ext_resource type="PackedScene" uid="uid://bh36rmt5w8d03" path="res://game/LevelEnd.tscn" id="2_f5x84"]
+[ext_resource type="Texture2D" uid="uid://cgien5brwsdfv" path="res://img/parallax_layers/moon.png" id="2_jiouf"]
 [ext_resource type="AudioStream" uid="uid://bybv223yg6k3l" path="res://music/Peggy Lee - Happy Holiday (Official Video).mp3" id="3_wnytt"]
 [ext_resource type="PackedScene" uid="uid://cf5makudwm4vy" path="res://levels/Level3.tscn" id="4_1hrej"]
+
+[sub_resource type="Gradient" id="Gradient_jiouf"]
+offsets = PackedFloat32Array(0, 0.8066667, 1)
+colors = PackedColorArray(0.035073083, 0.008909176, 0.06593647, 1, 0.11567228, 0.11507086, 0.17628524, 1, 0.16470589, 0.16470589, 0.25490198, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pixff"]
+gradient = SubResource("Gradient_jiouf")
+fill_to = Vector2(0, 1)
 
 [node name="Level2" type="Node"]
 editor_description = "LEVEL 2"
 script = ExtResource("1_432n0")
 
-[node name="BG" type="ColorRect" parent="."]
-offset_top = 5.0
-offset_right = 3207.0
-offset_bottom = 748.0
+[node name="Independent" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="BG" type="ColorRect" parent="Independent"]
+offset_right = 7683.0
+offset_bottom = 1087.0
 color = Color(0, 0, 0, 1)
+
+[node name="CanvasGroup" type="CanvasGroup" parent="Independent"]
+position = Vector2(-9, -6)
+
+[node name="Color" type="TextureRect" parent="Independent/CanvasGroup"]
+offset_right = 1172.0
+offset_bottom = 665.0
+texture = SubResource("GradientTexture2D_pixff")
+
+[node name="Moon" type="TextureRect" parent="Independent/CanvasGroup"]
+z_as_relative = false
+offset_left = 327.99997
+offset_top = 81.0
+offset_right = 625.1428
+offset_bottom = 336.71426
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_jiouf")
 
 [node name="LevelCollision" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAACABUAAAABAAAAAAADABUAAAABAAAAAAAEABUAAAABAAAAAAAFABUAAAABAAAAAAAGABUAAAABAAAAAAAHABUAAAABAAAAAAAIABUAAAABAAAAAAAJABUAAAABAAAAAAAKABUAAAABAAAAAAALABUAAAABAAAAAAAMABUAAAABAAAAAAANABUAAAABAAAAAAAOABUAAAABAAAAAAAPABUAAAABAAAAAAAQABUAAAABAAAAAAAZABIAAAABAAAAAAAZABMAAAABAAAAAAAaABMAAAABAAAAAAAaABIAAAABAAAAAAAjAAkAAAABAAAAAAAkAAkAAAABAAAAAAAsABQAAAABAAAAAAAtABQAAAABAAAAAAAuABQAAAABAAAAAAAzAAAAAAABAAAAAAAzAAEAAAABAAAAAAAzAAIAAAABAAAAAAA0AAIAAAABAAAAAAA0AAMAAAABAAAAAAA0AAQAAAABAAAAAAA0AAUAAAABAAAAAAA0AAYAAAABAAAAAAA0AAcAAAABAAAAAAA0AAgAAAABAAAAAAA0AAkAAAABAAAAAAA2AAgAAAABAAAAAAA2AAkAAAABAAAAAAA1AAkAAAABAAAAAAA1AAoAAAABAAAAAAA5AA8AAAABAAAAAAA5ABAAAAABAAAAAAA5ABEAAAABAAAAAAA5ABIAAAABAAAAAAA5ABMAAAABAAAAAAA5ABQAAAABAAAAAAA5ABUAAAABAAAAAAA6AA8AAAABAAAAAAA6ABAAAAABAAAAAAA6ABEAAAABAAAAAAA6ABIAAAABAAAAAAA6ABMAAAABAAAAAAA6ABQAAAABAAAAAAA6ABUAAAABAAAAAAA6ABYAAAABAAAAAABjABMAAAABAAAAAABiABMAAAABAAAAAABhABMAAAABAAAAAABgABMAAAABAAAAAABfABMAAAABAAAAAABeABMAAAABAAAAAABdABQAAAABAAAAAABcABQAAAABAAAAAABbABQAAAABAAAAAABaABQAAAABAAAAAABZABQAAAABAAAAAABYABQAAAABAAAAAABXABQAAAABAAAAAABWABQAAAABAAAAAABCABMAAAABAAAAAABDABMAAAABAAAAAABEABMAAAABAAAAAABFABMAAAABAAAAAABGABMAAAABAAAAAABHAAcAAAABAAAAAABIAAcAAAABAAAAAABJAAcAAAABAAAAAABKAAcAAAABAAAAAABNAA4AAAABAAAAAABOAA4AAAABAAAAAABPAA4AAAABAAAAAABQAA4AAAABAAAAAABRAA4AAAABAAAAAABSAA4AAAABAAAAAAA=")

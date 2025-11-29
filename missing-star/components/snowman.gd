@@ -9,15 +9,16 @@ extends CharacterBody2D
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -350.0
-var fly_duration: float = 0.3
-var jump_range: int = 400
+const MAX_DASH_SPEED := 600.0
 
+var jump_range: int = 400
 var can_fly := true
 var is_dashing: bool = false
-var dash_timer := 0.2
 var dash_velocity: Vector2
 var jumps_left: int = 1
 const MAX_JUMPS = 1
+
+var dash_remaining_distance: float
 
 func initialise():
 	pass
@@ -34,26 +35,38 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		can_fly = true
 		jumps_left = MAX_JUMPS
-	
-	if not is_dashing and not is_on_floor():
-		velocity += get_gravity() * delta
-
-	if not is_dashing:
-		var direction := Input.get_axis("left", "right")
-		if direction:
-			velocity.x = direction * SPEED
-		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	if is_dashing:
-		dash_timer -= delta
-		velocity = dash_velocity
-		if dash_timer <= 0.0:
-			is_dashing = false
+		dash_movement(delta)
+	else:
+		normal_movement(delta)
 
+	# Flip sprite
 	sprite.flip_h = velocity.x < 0
 
 	move_and_slide()
+
+func dash_movement(delta: float):
+	var movement = dash_velocity * delta
+
+	dash_remaining_distance -= movement.length()
+
+	if dash_remaining_distance <= 0.0:
+		set_process_input(true)
+		is_dashing = false
+		velocity = Vector2.ZERO
+
+	velocity = dash_velocity
+
+func normal_movement(delta: float):
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	var direction := Input.get_axis("left", "right")
+	if direction != 0:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("left_click"):
@@ -72,16 +85,16 @@ func fly():
 	if not can_fly:
 		return
 
-	var star_position = Globals.game.star.global_position
-	var direction: Vector2 = (star_position - global_position).normalized()
+	set_process_input(false)
 
-	var dash_speed = jump_range / fly_duration
+	var distance_to_star = (Globals.game.star.global_position - global_position).length()
+	var direction = (Globals.game.star.global_position - global_position).normalized()
 
-	dash_velocity = direction * dash_speed
+	dash_remaining_distance = min(distance_to_star, jump_range)
+
+	dash_velocity = direction * MAX_DASH_SPEED
 
 	is_dashing = true
-	dash_timer = fly_duration
-
 	can_fly = false
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
