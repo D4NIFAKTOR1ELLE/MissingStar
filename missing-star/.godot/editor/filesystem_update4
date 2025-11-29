@@ -7,3 +7,7 @@ res://components/snowman.gd
 res://game/MovingPlatform.tscn
 res://game/LevelEnd.tscn
 res://levels/Level2.tscn
+res://ui/EndScreen.tscn
+res://ui/end_screen.tres
+res://game.gd
+res://game/Transition.tscn

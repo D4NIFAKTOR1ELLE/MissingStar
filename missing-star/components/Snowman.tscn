@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://xwpouem86pmt"]
+[gd_scene load_steps=6 format=3 uid="uid://xwpouem86pmt"]
 
 [ext_resource type="Script" uid="uid://boqt20rk188r4" path="res://components/snowman.gd" id="1_y2cei"]
 [ext_resource type="Texture2D" uid="uid://dqi76nj0x3vd1" path="res://img/snowman/snowman_idle.png" id="2_17qwc"]
@@ -6,6 +6,17 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb48l"]
 size = Vector2(62, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_17qwc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_17qwc")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 5.0
+}]
 
 [node name="Snowman" type="CharacterBody2D"]
 script = ExtResource("1_y2cei")
@@ -15,19 +26,9 @@ position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_cb48l")
 metadata/_edit_lock_ = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -44.0
-offset_top = -46.0
-offset_right = 44.0
-offset_bottom = 42.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_17qwc")
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_17qwc")
+animation = &"Default"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

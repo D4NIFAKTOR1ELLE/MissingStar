@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://4gd1aew5rii8"]
+[gd_scene load_steps=2 format=3 uid="uid://4gd1aew5rii8"]
+
+[ext_resource type="Theme" uid="uid://bxy5nqxtnhpek" path="res://ui/end_screen.tres" id="1_iuj6g"]
 
 [node name="EndScreen" type="CanvasLayer"]
 
@@ -8,3 +10,50 @@ offset_top = -47.0
 offset_right = 1213.0
 offset_bottom = 702.0
 color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -303.0
+offset_top = 64.0
+offset_right = 307.0
+offset_bottom = 138.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center][color=yellow]YOU SAVED CHRISTMAS![/color][/center]"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 278.0
+offset_top = 195.0
+offset_right = 930.0
+offset_bottom = 499.0
+theme = ExtResource("1_iuj6g")
+columns = 2
+
+[node name="Label" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "COMPLETION TIME"
+
+[node name="CompletionTime" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "00:00:00"
+
+[node name="Label2" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "SECRET ORNAMENTS
+COLLECTED"
+
+[node name="SecretsCollected" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "0 / 3"
+
+[node name="Label3" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "DID YOU GET ON
+THE NICE LIST?"
+
+[node name="OfCourse" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "OF COURSE"

@@ -18,8 +18,6 @@ func start_game():
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
-	snowman.star_ref = star
-	snowman.game_ref = self
 	snowman.initialise()
 
 	launch_level(level1)
@@ -35,7 +33,7 @@ func launch_level(level: PackedScene):
 	
 	star.initialise()
 	
-	snowman.set_camera_limits(current_level.get_node("BG"))
+	snowman.set_camera_limits(current_level.get_node("Independent/BG"))
 
 func end_level(next_level: PackedScene):
 	Transition.fade_in()

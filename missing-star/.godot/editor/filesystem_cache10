@@ -1,20 +1,20 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1764402353
+::res://::1764406187
 default_bus_layout.tres::AudioBusLayout::4595527809284958627::1764400158::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1764354940::0::1::::<><><>0<>0<><>::
-game.gd::GDScript::2119083128624968817::1764363306::0::1::::<>Node<><>0<>0<><>::
+game.gd::GDScript::2119083128624968817::1764406187::0::1::::<>Node<><>0<>0<><>::
 Game.tscn::PackedScene::673609136865134389::1764360974::0::1::::<><><>0<>0<><>::uid://5gq8v5l6uwqj::::res://game.gd<>uid://bpyhjseyq21qq::::res://ui/StartScreen.tscn
 icon.svg::CompressedTexture2D::1862139378208412729::1764344948::1764344958::1::::<><><>0<>0<>15333cf13a87519e8de3e043b32d2b7d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 sound.gd::GDScript::1096313685041945984::1764350385::0::1::::<>CanvasLayer<><>0<>0<><>::
-::res://components/::1764401789
-snowman.gd::GDScript::3403297717824369291::1764401789::0::1::::<>CharacterBody2D<><>0<>0<><>::
-Snowman.tscn::PackedScene::1660696527507006319::1764401612::0::1::::<><><>0<>0<><>::uid://boqt20rk188r4::::res://components/snowman.gd<>uid://dqi76nj0x3vd1::::res://img/snowman/snowman_idle.png<>uid://c71tj0etc6ob2::::res://music/swing-whoosh-110410.mp3
+::res://components/::1764406481
+snowman.gd::GDScript::3403297717824369291::1764406481::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Snowman.tscn::PackedScene::1660696527507006319::1764406030::0::1::::<><><>0<>0<><>::uid://boqt20rk188r4::::res://components/snowman.gd<>uid://dqi76nj0x3vd1::::res://img/snowman/snowman_idle.png<>uid://c71tj0etc6ob2::::res://music/swing-whoosh-110410.mp3
 star.gd::GDScript::6652494092481742460::1764359006::0::1::::<>Sprite2D<><>0<>0<><>::
 Star.tscn::PackedScene::7954675553011224889::1764363881::0::1::::<><><>0<>0<><>::uid://c11ruui4chcwq::::res://components/star.gd<>uid://btmeukmnx8gbc::::res://img/star.png
 sub_viewport.gd::GDScript::7653063212508892090::1764350146::0::1::::<>SubViewport<><>0<>0<><>::
-::res://game/::1764402054
+::res://game/::1764402380
 globals.gd::GDScript::5277393323628747456::1764361258::0::1::::<>Node<><>0<>0<><>::
-LevelEnd.tscn::PackedScene::2937458412570394210::1764363882::0::1::::<><><>0<>0<><>::uid://bf618y8cadf3b::::res://game/level_end.gd
+LevelEnd.tscn::PackedScene::2937458412570394210::1764402380::0::1::::<><><>0<>0<><>::uid://bf618y8cadf3b::::res://game/level_end.gd<>uid://bdh07b4fabsv6::::res://img/level_end.png
 level_end.gd::GDScript::2802999496899850341::1764363199::0::1::::<>Area2D<><>0<>0<><>::
 MovingPlatform.tscn::PackedScene::6076963826412373311::1764402054::0::1::::<><><>0<>0<><>::
 transition.gd::GDScript::710360690907944187::1764360822::0::1::::<>CanvasLayer<><>0<>0<><>::
@@ -23,15 +23,17 @@ Transition.tscn::PackedScene::2185978262133888347::1764360956::0::1::::<><><>0<>
 collisiontile32.png::CompressedTexture2D::5533426870569550082::1764349253::1764349254::1::::<><><>0<>0<>c15b7dc60964af63d35136e75e87b178<>res://.godot/imported/collisiontile32.png-587fafd20f9484b46bc85fc9d6edcd57.ctex::
 level_end.png::CompressedTexture2D::2613013026659651097::1764401001::1764401052::1::::<><><>0<>0<>ec04be2a8bf30b2b9311d5d4e7045bbb<>res://.godot/imported/level_end.png-f48d71d3b094045eee42c24ba7e786cb.ctex::
 star.png::CompressedTexture2D::3745060374107452116::1764401014::1764401052::1::::<><><>0<>0<>568803f1686095c802a461b3fe7af1b4<>res://.godot/imported/star.png-d9e21300bfdce2df88dc348114f24979.ctex::
-::res://img/parallax_layers/::1764402353
+::res://img/parallax_layers/::1764407207
 cloud_parallax.png::CompressedTexture2D::1719478913553678160::1764349271::1764402354::1::::<><><>0<>0<>4a257c8c5b6256c6d7fde81e7b458354<>res://.godot/imported/cloud_parallax.png-4b3cbbe92a3f5721d781e0f8f45cc5e3.ctex::
+moon.png::CompressedTexture2D::5210757112586525595::1764407207::1764407210::1::::<><><>0<>0<>3d8d67ac43ffc6f302b5bdcd5494f88e<>res://.godot/imported/moon.png-6972a0a110a5b57ecc534f0b1a7e97da.ctex::
+snowfall.png::CompressedTexture2D::3321100913888157727::1764407183::1764407210::1::::<><><>0<>0<>d8cad103a2c984a3d80257e27ec8cc0f<>res://.godot/imported/snowfall.png-4c8aabf3dbc2dfa72782a8efde9233a6.ctex::
 ::res://img/snowman/::1764401237
 snowman_idle.png::CompressedTexture2D::8300797572574416004::1764401236::1764401237::1::::<><><>0<>0<>6ecff8147b7c7be10016cfb40e08b87b<>res://.godot/imported/snowman_idle.png-7ffd7d12421c0d96b74261561725e4f5.ctex::
-::res://levels/::1764402332
+::res://levels/::1764406558
 collision_tileset.tres::TileSet::1513738141687946612::1764400641::0::1::::<><><>0<>0<><>::uid://ck3oy5la7uat3::::res://img/collisiontile32.png
-Level1.tscn::PackedScene::6888390698089755063::1764402332::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://b4k7redskqs38::::res://levels/level.gd<>uid://bh36rmt5w8d03::::res://game/LevelEnd.tscn<>uid://b1uwhhd4ja70y::::res://levels/Level2.tscn
-Level2.tscn::PackedScene::4253966821388891482::1764363404::0::1::::<><><>0<>0<><>::uid://b4k7redskqs38::::res://levels/level.gd<>uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://bh36rmt5w8d03::::res://game/LevelEnd.tscn<>uid://cf5makudwm4vy::::res://levels/Level3.tscn
-Level3.tscn::PackedScene::5186446078407156214::1764401498::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://bh36rmt5w8d03::::res://game/LevelEnd.tscn
+Level1.tscn::PackedScene::6888390698089755063::1764406558::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://b4k7redskqs38::::res://levels/level.gd<>uid://bh36rmt5w8d03::::res://game/LevelEnd.tscn<>uid://142vg8o2i5pj::::res://music/The Supremes - My Favorite Things (Official Video).mp3<>uid://b1uwhhd4ja70y::::res://levels/Level2.tscn
+Level2.tscn::PackedScene::4253966821388891482::1764402573::0::1::::<><><>0<>0<><>::uid://b4k7redskqs38::::res://levels/level.gd<>uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://bh36rmt5w8d03::::res://game/LevelEnd.tscn<>uid://bybv223yg6k3l::::res://music/Peggy Lee - Happy Holiday (Official Video).mp3<>uid://cf5makudwm4vy::::res://levels/Level3.tscn
+Level3.tscn::PackedScene::5186446078407156214::1764402885::0::1::::<><><>0<>0<><>::uid://vtjbthkqh33u::::res://levels/collision_tileset.tres<>uid://chl84mqvte2ik::::res://music/Ella Fitzgerald - Frosty The Snowman (Official Video).mp3
 level.gd::GDScript::4444514444561213505::1764363404::0::1::::<>Node<><>0<>0<><>::
 ::res://music/::1764355460
 Ella Fitzgerald - Frosty The Snowman (Official Video).mp3::AudioStreamMP3::5288927532908417014::1764355436::1764355460::1::::<><><>0<>0<>5114849add614093a1209f6abd1a7350<>res://.godot/imported/Ella Fitzgerald - Frosty The Snowman (Official Video).mp3-9808eb05f3d978bada5334c061f8206e.mp3str::
@@ -39,8 +41,9 @@ Frank Wess - Rainy Afternoon.mp3::AudioStreamMP3::1463062360379950175::176435544
 Peggy Lee - Happy Holiday (Official Video).mp3::AudioStreamMP3::4074342044528142659::1764355440::1764355460::1::::<><><>0<>0<>3f8ff64efc7f21e45275dd9bc3239c0b<>res://.godot/imported/Peggy Lee - Happy Holiday (Official Video).mp3-0b976b0fddfec2f4d23785ee6339317d.mp3str::
 swing-whoosh-110410.mp3::AudioStreamMP3::7073729200546651117::1764350379::1764350406::1::::<><><>0<>0<>3b6b825a5077b3a853f942866f37f9ed<>res://.godot/imported/swing-whoosh-110410.mp3-eba3c261c85bd2b107fd2d8754f4487d.mp3str::
 The Supremes - My Favorite Things (Official Video).mp3::AudioStreamMP3::1886454116724446063::1764355441::1764355460::1::::<><><>0<>0<>f574d4befa52a1a9e445fdda85f764e8<>res://.godot/imported/The Supremes - My Favorite Things (Official Video).mp3-5bdb3688ae988db24abb7b228a392f2a.mp3str::
-::res://ui/::1764363788
+::res://ui/::1764403549
 ControlHint.tscn::PackedScene::8920138737721278194::1764348809::0::1::::<><><>0<>0<><>::
-EndScreen.tscn::PackedScene::2048091320866689273::1764363788::0::1::::<><><>0<>0<><>::
+EndScreen.tscn::PackedScene::2048091320866689273::1764403549::0::1::::<><><>0<>0<><>::uid://bxy5nqxtnhpek::::res://ui/end_screen.tres
+end_screen.tres::Theme::4052154755354079990::1764403549::0::1::::<><><>0<>0<><>::
 StartScreen.tscn::PackedScene::3489240448167974384::1764362462::0::1::::<><><>0<>0<><>::uid://b8r1u5mofr2w4::::res://ui/start_screen.gd
 start_screen.gd::GDScript::4739362898138846989::1764362680::0::1::::<>CanvasLayer<><>0<>0<><>::

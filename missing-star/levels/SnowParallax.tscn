@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://qgxeslklugt8"]
+
+[ext_resource type="Texture2D" uid="uid://bnk1bueyneea6" path="res://img/parallax_layers/snowfall.png" id="1_62xn3"]
+
+[node name="Parallax2D" type="Parallax2D"]
+repeat_size = Vector2(1154, 654)
+autoscroll = Vector2(40, 40)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.5137255)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_62xn3")

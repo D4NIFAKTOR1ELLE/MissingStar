@@ -2,22 +2,25 @@ extends CharacterBody2D
 
 @export var viewport_path: NodePath
 
-var viewport
-var sound
-var camera
+@onready var viewport = $SubViewport
+@onready var sound= $AudioStreamPlayer
+@onready var camera = $Camera2D
+@onready var sprite = $Sprite
 
 const SPEED = 400.0
-const JUMP_VELOCITY = -380.0
+const JUMP_VELOCITY = -350.0
+var fly_duration: float = 0.3
 var jump_range: int = 400
 
-var can_doublejump = true
-var star_ref
-var game_ref
+var can_fly := true
+var is_dashing: bool = false
+var dash_timer := 0.2
+var dash_velocity: Vector2
+var jumps_left: int = 1
+const MAX_JUMPS = 1
 
 func initialise():
-	viewport = $SubViewport
-	sound = $AudioStreamPlayer
-	camera = $Camera2D
+	pass
 
 func save_to():
 	viewport.world_2d = get_tree().root.get_world_2d()
@@ -28,46 +31,58 @@ func save_to():
 	return img.save_png("user://Screenshot.png")
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
+	if is_on_floor():
+		can_fly = true
+		jumps_left = MAX_JUMPS
+	
+	if not is_dashing and not is_on_floor():
 		velocity += get_gravity() * delta
-		
-	var direction := Input.get_axis("left", "right")
 
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if not is_dashing:
+		var direction := Input.get_axis("left", "right")
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	if is_dashing:
+		dash_timer -= delta
+		velocity = dash_velocity
+		if dash_timer <= 0.0:
+			is_dashing = false
+
+	sprite.flip_h = velocity.x < 0
 
 	move_and_slide()
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("left_click"):
-		await fly()
+		fly()
 	if Input.is_action_just_pressed("right_click"):
 		save_to()
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		can_doublejump = true
+	if Input.is_action_pressed("jump") and jumps_left > 0:
 		jump()
-	if Input.is_action_just_pressed("jump") and !is_on_floor() and can_doublejump:
-		can_doublejump = false  
-		jump()
+		jumps_left -= 1
 
 func jump():
 	velocity.y = JUMP_VELOCITY
 	sound.play()
 
 func fly():
-	var star_position = star_ref.global_position
+	if not can_fly:
+		return
 
-	var angle = star_position.direction_to(global_position).angle()
-	
-	var final_position: Vector2 = Vector2(
-		global_position.x - jump_range * cos(angle),
-		global_position.y - jump_range * sin(angle)
-	)
+	var star_position = Globals.game.star.global_position
+	var direction: Vector2 = (star_position - global_position).normalized()
 
-	var tween = get_tree().create_tween()
-	tween.tween_property(self, "global_position", final_position, 0.3)
+	var dash_speed = jump_range / fly_duration
+
+	dash_velocity = direction * dash_speed
+
+	is_dashing = true
+	dash_timer = fly_duration
+
+	can_fly = false
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	await die()
@@ -78,7 +93,7 @@ func die():
 	Transition.fade_in()
 	await Transition.animplayer.animation_finished
 
-	await game_ref.respawn()
+	await Globals.game.respawn()
 	await stop(true)
 	
 	Transition.fade_out()
