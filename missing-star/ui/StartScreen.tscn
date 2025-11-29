@@ -40,6 +40,15 @@ theme_override_font_sizes/normal_font_size = 80
 bbcode_enabled = true
 text = "[center]MISSING [color=yellow]STAR[/color][/center]"
 
+[node name="Name2" type="RichTextLabel" parent="."]
+offset_left = 298.0
+offset_top = 231.0
+offset_right = 924.0
+offset_bottom = 254.0
+theme_override_font_sizes/normal_font_size = 17
+bbcode_enabled = true
+text = "[center]2025 - D4NIFAKTOR1ELLE[/center]"
+
 [node name="Options" type="VBoxContainer" parent="."]
 offset_left = 480.0
 offset_top = 356.0

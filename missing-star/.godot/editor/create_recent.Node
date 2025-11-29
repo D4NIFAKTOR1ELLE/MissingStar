@@ -1,3 +1,4 @@
+CanvasLayer
 TextureRect
 Parallax2D
 Sprite2D
@@ -6,7 +7,6 @@ Area2D
 AnimationPlayer
 ColorRect
 CanvasGroup
-CanvasLayer
 AnimatedSprite2D
 Label
 GridContainer
