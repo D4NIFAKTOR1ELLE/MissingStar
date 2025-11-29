@@ -3,3 +3,9 @@ res://ui/EndScreen.tscn
 res://levels/collision_tileset.tres
 res://components/Snowman.tscn
 res://levels/level_3.gd
+res://components/snowman.gd
+res://Game.tscn
+res://ui/StartScreen.tscn
+res://levels/Level1.tscn
+res://levels/Level2.tscn
+res://levels/Level3.tscn

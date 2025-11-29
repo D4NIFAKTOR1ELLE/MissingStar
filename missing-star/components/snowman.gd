@@ -3,9 +3,10 @@ extends CharacterBody2D
 @export var viewport_path: NodePath
 
 @onready var viewport = $SubViewport
-@onready var sound= $AudioStreamPlayer
+@onready var sound = $AudioStreamPlayer
 @onready var camera = $Camera2D
 @onready var sprite = $Sprite
+@onready var animation = $AnimationPlayer
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -350.0
@@ -33,6 +34,7 @@ func save_to():
 
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
+		animation.play("idle")
 		can_fly = true
 		jumps_left = MAX_JUMPS
 
@@ -42,7 +44,10 @@ func _physics_process(delta: float) -> void:
 		normal_movement(delta)
 
 	# Flip sprite
-	sprite.flip_h = velocity.x < 0
+	if velocity.x > 0:
+		sprite.flip_h = false
+	elif velocity.x < 0:
+		sprite.flip_h = true
 
 	move_and_slide()
 
@@ -78,8 +83,11 @@ func _input(_event: InputEvent) -> void:
 		jumps_left -= 1
 
 func jump():
+	animation.play("rise")
 	velocity.y = JUMP_VELOCITY
+	await animation.animation_finished
 	sound.play()
+	animation.play("fall")
 
 func fly():
 	if not can_fly:

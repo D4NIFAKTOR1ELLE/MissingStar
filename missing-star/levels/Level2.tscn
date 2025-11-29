@@ -55,5 +55,5 @@ position = Vector2(119, 959)
 stream = ExtResource("3_wnytt")
 
 [node name="LevelEnd" parent="." instance=ExtResource("2_f5x84")]
-position = Vector2(3123, 546)
+position = Vector2(9516, 1835)
 next_level = ExtResource("4_1hrej")

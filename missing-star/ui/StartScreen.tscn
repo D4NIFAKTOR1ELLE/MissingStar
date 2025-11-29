@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpyhjseyq21qq"]
+[gd_scene load_steps=6 format=3 uid="uid://bpyhjseyq21qq"]
 
 [ext_resource type="Script" uid="uid://b8r1u5mofr2w4" path="res://ui/start_screen.gd" id="1_rte7b"]
+[ext_resource type="FontFile" uid="uid://bnusqp34j6u52" path="res://components/font/Cinzel-Regular.otf" id="2_p5me2"]
+
+[sub_resource type="FontVariation" id="FontVariation_enn3t"]
+base_font = ExtResource("2_p5me2")
+variation_embolden = 0.66
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o32ld"]
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="Theme" id="Theme_rte7b"]
+Button/colors/font_hover_color = Color(0.9490196, 0.9490196, 0.28235295, 1)
+Button/font_sizes/font_size = 25
+Button/fonts/font = SubResource("FontVariation_enn3t")
+Button/styles/normal = SubResource("StyleBoxFlat_o32ld")
+VBoxContainer/constants/separation = 9
 
 [node name="StartScreen" type="CanvasLayer"]
 script = ExtResource("1_rte7b")
@@ -26,6 +45,7 @@ offset_left = 480.0
 offset_top = 356.0
 offset_right = 720.0
 offset_bottom = 568.0
+theme = SubResource("Theme_rte7b")
 
 [node name="Start" type="Button" parent="Options"]
 layout_mode = 2

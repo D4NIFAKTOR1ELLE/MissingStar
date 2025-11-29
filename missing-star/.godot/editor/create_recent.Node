@@ -1,12 +1,12 @@
+TextureRect
+Parallax2D
 Sprite2D
 CollisionShape2D
 Area2D
-TextureRect
 AnimationPlayer
 ColorRect
 CanvasGroup
 CanvasLayer
-Parallax2D
 AnimatedSprite2D
 Label
 GridContainer

@@ -1,8 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://xwpouem86pmt"]
+[gd_scene load_steps=21 format=3 uid="uid://xwpouem86pmt"]
 
 [ext_resource type="Script" uid="uid://boqt20rk188r4" path="res://components/snowman.gd" id="1_y2cei"]
 [ext_resource type="Texture2D" uid="uid://dqi76nj0x3vd1" path="res://img/snowman/snowman_idle.png" id="2_17qwc"]
+[ext_resource type="Texture2D" uid="uid://clhaga4r34bd" path="res://img/snowman/snowman_rise.png" id="3_4l7dg"]
 [ext_resource type="AudioStream" uid="uid://c71tj0etc6ob2" path="res://music/swing-whoosh-110410.mp3" id="3_hgosa"]
+[ext_resource type="Texture2D" uid="uid://dceu4colyckxo" path="res://img/snowman/snowman_fall.png" id="4_tltqe"]
+[ext_resource type="Texture2D" uid="uid://dkqgt7tupgcxh" path="res://img/snowman/snowman_2_idle.png" id="5_uj4js"]
+[ext_resource type="Texture2D" uid="uid://dmh37xvuq4dt0" path="res://img/snowman/snowman_2_rise.png" id="6_q8d5x"]
+[ext_resource type="Texture2D" uid="uid://y45njgdxfuh3" path="res://img/snowman/snowman_2_fall.png" id="7_2ewl0"]
+[ext_resource type="Texture2D" uid="uid://dcxlxmccvlr0e" path="res://img/snowman/snowman_3_idle.png" id="8_70rs2"]
+[ext_resource type="Texture2D" uid="uid://ne56186sxkoo" path="res://img/snowman/snowman_3_rise.png" id="9_5gynt"]
+[ext_resource type="Texture2D" uid="uid://bmlag32ikohvu" path="res://img/snowman/snowman_3_fall.png" id="10_8xx6i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb48l"]
 size = Vector2(62, 80)
@@ -12,11 +20,126 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_17qwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4l7dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tltqe")
+}],
+"loop": false,
+"name": &"Level1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_uj4js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q8d5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2ewl0")
 }],
 "loop": true,
-"name": &"Default",
+"name": &"Level2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_70rs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5gynt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8xx6i")
+}],
+"loop": true,
+"name": &"Level3",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_70rs2"]
+resource_name = "dash_init"
+
+[sub_resource type="Animation" id="Animation_5gynt"]
+resource_name = "dash_exit"
+
+[sub_resource type="Animation" id="Animation_8xx6i"]
+resource_name = "rise"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_xvxh7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_pacwq"]
+resource_name = "fall"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
+
+[sub_resource type="Animation" id="Animation_yrv37"]
+resource_name = "idle"
+length = 0.001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8xx6i"]
+_data = {
+&"RESET": SubResource("Animation_xvxh7"),
+&"dash_exit": SubResource("Animation_5gynt"),
+&"dash_init": SubResource("Animation_70rs2"),
+&"fall": SubResource("Animation_pacwq"),
+&"idle": SubResource("Animation_yrv37"),
+&"rise": SubResource("Animation_8xx6i")
+}
 
 [node name="Snowman" type="CharacterBody2D"]
 script = ExtResource("1_y2cei")
@@ -28,7 +151,7 @@ metadata/_edit_lock_ = true
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_17qwc")
-animation = &"Default"
+animation = &"Level1"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -40,6 +163,9 @@ volume_db = -20.036
 rect = Rect2(-20, -19, 40, 40)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8xx6i")
+}
 
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false
