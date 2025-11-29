@@ -8,6 +8,7 @@ var level2 = preload("res://levels/Level2.tscn")
 var level3 = preload("res://levels/Level3.tscn")
 
 var current_level
+var deaths = 0
 var ornaments_collected = 0
 var time_elapsed := 0.0
 

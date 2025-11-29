@@ -20,6 +20,7 @@ func _ready() -> void:
 
 	$GridContainer/CompletionTime.text = _format_seconds(completion_time)
 	$GridContainer/SecretsCollected.text = "%d / 3" % ornaments_collected
+	$GridContainer/Deaths.text = "%d" % Globals.game.deaths
 	
 	await get_tree().create_timer(2).timeout
 	
