@@ -1,13 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cstyyas8vk5tb"]
+[gd_scene load_steps=4 format=3 uid="uid://cstyyas8vk5tb"]
 
 [ext_resource type="Script" uid="uid://cuuo3437mduld" path="res://game/moving_platform.gd" id="1_7ha7e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c1x4e"]
-size = Vector2(128, 32)
+size = Vector2(272, 32)
 
-[node name="MovingPlatform" type="StaticBody2D"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7ha7e"]
+
+[node name="MovingPlatform" type="Node2D"]
 script = ExtResource("1_7ha7e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 1)
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
 shape = SubResource("RectangleShape2D_c1x4e")
+
+[node name="TextureRect" type="TextureRect" parent="AnimatableBody2D"]
+offset_left = -136.0
+offset_top = -16.0
+offset_right = 136.0
+offset_bottom = 16.0
+texture = SubResource("PlaceholderTexture2D_7ha7e")

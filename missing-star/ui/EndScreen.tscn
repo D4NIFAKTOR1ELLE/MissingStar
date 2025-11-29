@@ -29,14 +29,14 @@ text = "[center][color=yellow]YOU COMPLETED THE CHRISTMAS TREE![/color][/center]
 [node name="GridContainer" type="GridContainer" parent="."]
 offset_left = 272.0
 offset_top = 232.0
-offset_right = 948.0
+offset_right = 988.0
 offset_bottom = 512.0
 theme = ExtResource("1_iuj6g")
 columns = 2
 
 [node name="Label" type="Label" parent="GridContainer"]
 layout_mode = 2
-text = "COMPLETION TIME"
+text = "TIME ELAPSED            "
 
 [node name="CompletionTime" type="Label" parent="GridContainer"]
 layout_mode = 2
@@ -60,3 +60,13 @@ THE NICE LIST?"
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 text = "OF COURSE :^)"
+
+[node name="Quit" type="RichTextLabel" parent="."]
+offset_left = 330.0
+offset_top = 547.0
+offset_right = 904.0
+offset_bottom = 620.0
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[center]THANK YOU FOR PLAYING!
+PRESS [color=yellow][C][/color] TO QUIT THE GAME[/center]"

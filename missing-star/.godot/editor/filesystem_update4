@@ -14,3 +14,9 @@ res://levels/level.gd
 res://levels/InBetween.tscn
 res://ui/end_screen.gd
 res://game.gd
+res://ui/InBetween.tscn
+res://ui/in_between.gd
+res://game/level_end.gd
+res://game/LevelEnd.tscn
+res://game/MovingPlatform.tscn
+res://game/moving_platform.gd
