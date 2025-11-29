@@ -1,9 +1,9 @@
+TextureRect
+AnimationPlayer
 AudioStreamPlayer
 RichTextLabel
-TextureRect
 AnimatableBody2D
 Node2D
-AnimationPlayer
 CanvasLayer
 Parallax2D
 Sprite2D
@@ -12,4 +12,3 @@ Area2D
 ColorRect
 CanvasGroup
 AnimatedSprite2D
-Label

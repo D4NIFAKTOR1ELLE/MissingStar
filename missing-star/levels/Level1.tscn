@@ -88,7 +88,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="Spawn" type="Marker2D" parent="."]
-position = Vector2(125, 1276)
+position = Vector2(7325, 395)
 
 [node name="LevelEnd" parent="." instance=ExtResource("2_32mhh")]
 position = Vector2(7495, 375)

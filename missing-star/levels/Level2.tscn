@@ -64,7 +64,7 @@ tile_map_data = PackedByteArray("AAAAAB8AAAABAAAAAAABAB8AAAABAAAAAAACAB8AAAABAAA
 tile_set = ExtResource("1_gljt1")
 
 [node name="Spawn" type="Marker2D" parent="."]
-position = Vector2(108, 933)
+position = Vector2(9421, 1935)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_wnytt")

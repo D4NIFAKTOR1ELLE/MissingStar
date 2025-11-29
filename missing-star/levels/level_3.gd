@@ -10,6 +10,9 @@ func _ready():
 func _on_game_end_body_entered(_body: Node2D) -> void:
 	Globals.game.set_physics_process(false)
 	
+	Globals.game.star.get_node("AnimationPlayer").play("dissolve")
+	await Globals.game.star.get_node("AnimationPlayer").animation_finished
+	
 	Transition.fade_in()
 	await Transition.animplayer.animation_finished
 	
