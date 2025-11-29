@@ -3,7 +3,7 @@ extends CanvasLayer
 func _on_start_pressed() -> void:
 	get_tree().root.get_node("Game").start_game()
 	
-	Transition.fade_out()
+	Transition.show()
 	
 	queue_free()
 

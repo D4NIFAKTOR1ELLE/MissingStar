@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bytr1dsg0ft2g" path="res://ui/control_hint.gd" id="1_k0sq5"]
 
 [node name="ControlHint" type="CanvasLayer"]
-layer = 5
+layer = 2
 script = ExtResource("1_k0sq5")
 
 [node name="BG" type="ColorRect" parent="."]
@@ -71,6 +71,6 @@ offset_right = 848.0
 offset_bottom = 524.0
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "PRESS [color=yellow][C][/color] TO CONTINUE
+text = "PRESS [color=yellow][G][/color] TO CONTINUE
 OR TO ENABLE/DISABLE THIS CONTROL HINT"
 horizontal_alignment = 1

@@ -29,8 +29,13 @@ func start_game():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 	snowman.initialise()
-
+	
+	ControlHint.show()
+	
 	launch_level(level1)
+
+	Transition.fade_out()
+	await Transition.animplayer.animation_finished
 
 func launch_level(level: PackedScene):
 	if is_instance_valid(current_level):
