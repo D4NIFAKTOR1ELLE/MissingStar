@@ -4,8 +4,8 @@ var end_screen = preload("res://ui/EndScreen.tscn").instantiate()
 
 func _ready():
 	await get_tree().process_frame
-	
-	$GameEnd/CollisionShape2D.set_deferred("disabled", false)
+
+	Globals.game.snowman.sprite.animation = self.name
 
 func _on_game_end_body_entered(_body: Node2D) -> void:
 	Globals.game.set_physics_process(false)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpyhjseyq21qq"]
+[gd_scene load_steps=7 format=3 uid="uid://bpyhjseyq21qq"]
 
 [ext_resource type="Script" uid="uid://b8r1u5mofr2w4" path="res://ui/start_screen.gd" id="1_rte7b"]
+[ext_resource type="Texture2D" uid="uid://bsgatb4cd8sms" path="res://img/parallax_layers/title.png" id="2_enn3t"]
 [ext_resource type="FontFile" uid="uid://bnusqp34j6u52" path="res://components/font/Cinzel-Regular.otf" id="2_p5me2"]
 
 [sub_resource type="FontVariation" id="FontVariation_enn3t"]
@@ -30,6 +31,15 @@ offset_top = -47.0
 offset_right = 1213.0
 offset_bottom = 702.0
 color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="BG"]
+self_modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
+layout_mode = 0
+offset_left = 213.0
+offset_top = 75.0
+offset_right = 1365.0
+offset_bottom = 723.0
+texture = ExtResource("2_enn3t")
 
 [node name="Name" type="RichTextLabel" parent="."]
 offset_left = 280.0

@@ -1,3 +1,76 @@
-[gd_scene format=3 uid="uid://d0c8m8k05iee1"]
+[gd_scene load_steps=3 format=3 uid="uid://d0c8m8k05iee1"]
+
+[ext_resource type="Theme" uid="uid://bxy5nqxtnhpek" path="res://ui/end_screen.tres" id="1_gqwjx"]
+[ext_resource type="Script" uid="uid://bytr1dsg0ft2g" path="res://ui/control_hint.gd" id="1_k0sq5"]
 
 [node name="ControlHint" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_k0sq5")
+
+[node name="BG" type="ColorRect" parent="."]
+offset_left = 33.0
+offset_top = 36.0
+offset_right = 1121.0
+offset_bottom = 617.0
+color = Color(0, 0, 0, 1)
+
+[node name="UpperTitle" type="RichTextLabel" parent="BG"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 52.0
+offset_right = 1041.0
+offset_bottom = 124.0
+theme_override_font_sizes/normal_font_size = 54
+bbcode_enabled = true
+text = "[color=yellow]CONTROLS[/color]"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="BG"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 175.0
+offset_right = 941.0
+offset_bottom = 455.0
+theme = ExtResource("1_gqwjx")
+columns = 2
+
+[node name="Label" type="Label" parent="BG/GridContainer"]
+layout_mode = 2
+text = "[a], [left arrow]
+[d], [right arrow]    "
+
+[node name="CompletionTime" type="Label" parent="BG/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "MOVE"
+
+[node name="Label2" type="Label" parent="BG/GridContainer"]
+layout_mode = 2
+text = "[w], [space]"
+
+[node name="SecretsCollected" type="Label" parent="BG/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "JUMP"
+
+[node name="Label3" type="Label" parent="BG/GridContainer"]
+layout_mode = 2
+text = "LEFT MOUSE BUTTON"
+
+[node name="OfCourse" type="Label" parent="BG/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "DASH AFTER
+THE STAR"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BG"]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 457.0
+offset_right = 848.0
+offset_bottom = 524.0
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "PRESS [color=yellow][C][/color] TO CONTINUE
+OR TO ENABLE/DISABLE THIS CONTROL HINT"
+horizontal_alignment = 1

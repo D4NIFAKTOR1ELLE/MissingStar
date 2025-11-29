@@ -81,8 +81,8 @@ func normal_movement(delta: float):
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_pressed("left_click") and !is_dashing:
 		await fly()
-	if Input.is_action_just_pressed("right_click"):
-		save_to()
+	#if Input.is_action_just_pressed("right_click"):
+		#save_to()
 	if Input.is_action_pressed("jump") and jumps_left > 0 and !is_dashing:
 		jump()
 		jumps_left -= 1

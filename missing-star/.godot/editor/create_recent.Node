@@ -1,6 +1,6 @@
 RichTextLabel
-AnimatableBody2D
 TextureRect
+AnimatableBody2D
 Node2D
 AnimationPlayer
 CanvasLayer
@@ -12,4 +12,3 @@ ColorRect
 CanvasGroup
 AnimatedSprite2D
 Label
-GridContainer

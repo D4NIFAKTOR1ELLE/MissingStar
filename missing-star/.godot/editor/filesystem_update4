@@ -20,3 +20,5 @@ res://game/level_end.gd
 res://game/LevelEnd.tscn
 res://game/MovingPlatform.tscn
 res://game/moving_platform.gd
+res://ui/ControlHint.tscn
+res://ui/control_hint.gd
